@@ -2,7 +2,7 @@ const userData = {
   githubUsername: "thirunavukkarasu",
   name: "Thirunavukkarasu",
   designation: "Full-Stack Developer and Architect",
-  avatarUrl: "/avatar.png",
+  avatarUrl: "/avatar.jpg",
   email: "thirunavukkarasu.sam@gmail.com",
   phone: "+91 9789172265",
   address: "Bengaluru, Karnataka, India.",
@@ -10,7 +10,7 @@ const userData = {
     {
       title: "Project 1",
       link: "https://project1.com",
-      imgUrl: "/project1.jpg",
+      imgUrl: "/project1.png",
     },
     {
       title: "Project 2",
@@ -69,9 +69,9 @@ const userData = {
   ],
   resumeUrl: "",
   socialLinks: {
-    instagram: "https://instagram.com/thirunavukkarasu",
-    twitter: "https://twitter.com/thirunavukkarasu",
-    linkedin: "https://linkedin.com/in/thirunavukkarasu_m",
+    instagram: "https://instagram.com/thirunavukkarasu_ma",
+    twitter: "https://twitter.com/thiruhuman",
+    linkedin: "https://linkedin.com/in/thirunavukkarasu-m",
     github: "https://github.com/thirunavukkarasu",
     facebook: "https://facebook.com/",
   },

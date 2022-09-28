@@ -10,7 +10,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
   const meta = {
     title: "Thirunavukkarasu - Developer, Writer, Architect and YouTuber",
     description: `I've been developing websites for 7 years straight.`,
-    image: "/avatar.png",
+    image: "/avatar.jpg",
     type: "website",
     ...customMeta,
   };
