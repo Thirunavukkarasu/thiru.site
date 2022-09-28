@@ -111,6 +111,12 @@ export default function Navbar() {
               )}
             </a>
           </Link>
+          <a
+            href="https://blog.thirunavukkarasu.com"
+            className="text-base font-normal text-gray-600 dark:text-gray-300"
+          >
+            Blog
+          </a>
           <Link href="/contact">
             <a
               className={`text-base  ${
