@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
 
 export default function LatestCode({ repositories }) {
@@ -11,6 +9,7 @@ export default function LatestCode({ repositories }) {
     // console.log("latestRepos", latestRepos);
     setRepos(repositories);
   }, []);
+
   return (
     <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
       <div className="max-w-6xl mx-auto">
