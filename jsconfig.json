@@ -11,5 +11,6 @@
       "@hooks/*": ["hooks/*"],
       "@constants/*": ["constants/*"]
     }
-  }
+  },
+  "include": ["pages/**/*"]
 }

@@ -8,7 +8,7 @@ import userData from "@constants/data";
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Thirunavukkarasu - Developer, Writer, Architect"
+      title="Thirunavukkarasu - Developer, Writer, Architect & Leader"
       description="This is my personal blog ."
     >
       <Hero />
