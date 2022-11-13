@@ -66,12 +66,12 @@ export default function AboutMe() {
               Social Links
             </h1>
             <div className="mt-4 ml-4">
-              <div className="flex flex-row justify-start items-center ">
+              {/*<div className="flex flex-row justify-start items-center ">
                 <a
                   href={userData.socialLinks.facebook}
                   className="flex flex-row items-center space-x-4 group"
                 >
-                  <div className="my-4">&rarr;</div>
+                  <div className="my-4">-</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
                     Facebook
@@ -83,7 +83,7 @@ export default function AboutMe() {
                   href={userData.socialLinks.twitter}
                   className="flex flex-row items-center space-x-4 group"
                 >
-                  <div className="my-4">&rarr;</div>
+                  <div className="my-4">-</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
                     Twitter
@@ -95,7 +95,7 @@ export default function AboutMe() {
                   href={userData.socialLinks.github}
                   className="flex flex-row items-center space-x-4 group"
                 >
-                  <div className="my-4">&rarr;</div>
+                  <div className="my-4">-</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
                     GitHub
@@ -107,7 +107,7 @@ export default function AboutMe() {
                   href={userData.socialLinks.linkedin}
                   className="flex flex-row items-center space-x-4 group"
                 >
-                  <div className="my-4">&rarr;</div>
+                  <div className="my-4">-</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
                     LinkedIn
@@ -119,18 +119,18 @@ export default function AboutMe() {
                   href={userData.socialLinks.instagram}
                   className="flex flex-row items-center space-x-4 group"
                 >
-                  <div className="my-4">&rarr;</div>
+                  <div className="my-4">-</div>
                   <p className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
                     <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-28 group-hover:translate-x-0 transition duration-300"></div>
                     Instagram
                   </p>
                 </a>
-              </div>
+            </div>*/}
             </div>
           </div>
           {/* Text area */}
           <div className="col-span-1 md:col-span-2">
-            {userData.about.description?.map((desc, idx) => (
+            {userData?.about?.description?.map((desc, idx) => (
               <p
                 key={idx}
                 className="text-xl text-gray-700 mb-4 dark:text-gray-300 "
@@ -195,6 +195,6 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
