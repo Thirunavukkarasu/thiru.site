@@ -1,32 +1,28 @@
-import React from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { Html, Head, Main, NextScript } from 'next/document'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-export default function ContainerBlock({ children, ...customMeta }) {
-  const router = useRouter();
-
+export default function Document() {
   const meta = {
     title: "Thirunavukkarasu - Developer, Writer, Architect and YouTuber",
     description: `I've been developing websites for 7 years straight.`,
     image: "/avatar.jpg",
-    type: "website",
-    ...customMeta,
+    type: "website"
   };
+
   return (
-    <div>
+    <Html>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://thirunavukkarasu.com${router.asPath}`}
+          content={`https://thirunavukkarasu.com`}
         />
         <link
           rel="canonical"
-          href={`https://thirunavukkarasu.com${router.asPath}`}
+          href={`https://thirunavukkarasu.com`}
         />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Thirunavukkarasu" />
@@ -42,11 +38,12 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className="dark:bg-gray-800 w-full">
+      <body>
         <Navbar />
-        <div>{children}</div>
+        <Main />
         <Footer />
-      </main>
-    </div>
-  );
+        <NextScript />
+      </body>
+    </Html>
+  )
 }

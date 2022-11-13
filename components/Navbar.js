@@ -6,7 +6,6 @@ import userData from "@constants/data";
 
 export default function Navbar() {
   const router = useRouter();
-  console.log(router.asPath);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -35,14 +34,13 @@ export default function Navbar() {
         <div className="space-x-8 hidden md:block">
           <Link href="/about">
             <a
-              className={`text-base  ${
-                router.asPath === "/about"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
+              className={`text-base  ${router?.asPath === "/about"
+                ? "text-gray-800 font-bold dark:text-gray-400"
+                : "text-gray-600 dark:text-gray-300 font-normal "
+                }`}
             >
               About{" "}
-              {router.asPath === "/about" && (
+              {router?.asPath === "/about" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -61,14 +59,13 @@ export default function Navbar() {
           </Link>
           <Link href="/projects">
             <a
-              className={`text-base  ${
-                router.asPath === "/projects"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
+              className={`text-base  ${router?.asPath === "/projects"
+                ? "text-gray-800 font-bold dark:text-gray-400"
+                : "text-gray-600 dark:text-gray-300 font-normal "
+                }`}
             >
               Projects
-              {router.asPath === "/projects" && (
+              {router?.asPath === "/projects" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -87,14 +84,13 @@ export default function Navbar() {
           </Link>
           <Link href="/experience">
             <a
-              className={`text-base  ${
-                router.asPath === "/experience"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
+              className={`text-base  ${router?.asPath === "/experience"
+                ? "text-gray-800 font-bold dark:text-gray-400"
+                : "text-gray-600 dark:text-gray-300 font-normal "
+                }`}
             >
               Experience{" "}
-              {router.asPath === "/experience" && (
+              {router?.asPath === "/experience" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -119,14 +115,13 @@ export default function Navbar() {
           </a>
           <Link href="/contact">
             <a
-              className={`text-base  ${
-                router.asPath === "/contact"
-                  ? "text-gray-800 font-bold dark:text-gray-400"
-                  : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
+              className={`text-base  ${router?.asPath === "/contact"
+                ? "text-gray-800 font-bold dark:text-gray-400"
+                : "text-gray-600 dark:text-gray-300 font-normal "
+                }`}
             >
               Contact
-              {router.asPath === "/contact" && (
+              {router?.asPath === "/contact" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

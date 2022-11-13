@@ -1,4 +1,3 @@
-import ContainerBlock from "@components/ContainerBlock";
 import FavouriteProjects from "@components/FavouriteProjects";
 import LatestCode from "@components/LatestCode";
 import Hero from "@components/Hero";
@@ -7,14 +6,11 @@ import userData from "@constants/data";
 
 export default function Home({ repositories }) {
   return (
-    <ContainerBlock
-      title="Thirunavukkarasu - Developer, Writer, Architect & Leader"
-      description="This is my personal blog ."
-    >
+    <>
       <Hero />
       <FavouriteProjects />
       <LatestCode repositories={repositories} />
-    </ContainerBlock>
+    </>
   );
 }
 
@@ -27,7 +23,8 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      repositories,
+      repositories: repositories || [],
     },
   };
 };
+
