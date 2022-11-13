@@ -34,7 +34,7 @@ const userData = {
     description: [
       `I've been developing full-stack application for the last 11 years. I didn't know what full-stack meant at that time because the term was not coined back then.`,
     ],
-    currentProject: "Project 10",
+    currentProject: "Order Assist App",
     currentProjectUrl: "https://project10.com",
   },
   experience: [
