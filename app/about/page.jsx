@@ -1,10 +1,15 @@
 import React from "react";
-import userData from "@constants/data";
+import { userData } from "../../constants/data";
 
 export default function AboutMe() {
-  const socialLinks = [{ title: 'LinkedIn' }, { title: 'Github' }, { title: 'Facebook' }, {
-    title: "Instagram"
-  }]
+  const socialLinks = [
+    { title: "LinkedIn" },
+    { title: "Github" },
+    { title: "Facebook" },
+    {
+      title: "Instagram",
+    },
+  ];
   return (
     <section className="bg-white">
       <div className="max-w-6xl mx-auto h-48 bg-white">
@@ -33,9 +38,7 @@ export default function AboutMe() {
           {/* Social Buttons */}
           <div className="inline-flex flex-col">
             <div>
-              <h1 className="text-xl font-semibold text-gray-700 ">
-                Contact
-              </h1>
+              <h1 className="text-xl font-semibold text-gray-700 ">Contact</h1>
               <p className="text-lg text-gray-500 mt-4">
                 For any sort help / enquiry, shoot a{" "}
                 <a
@@ -88,10 +91,7 @@ export default function AboutMe() {
           {/* Text area */}
           <div className="col-span-1 md:col-span-2">
             {userData?.about?.description?.map((desc, idx) => (
-              <p
-                key={idx}
-                className="text-xl text-gray-700 mb-4"
-              >
+              <p key={idx} className="text-xl text-gray-700 mb-4">
                 {desc}
               </p>
             ))}
@@ -152,6 +152,6 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-    </section >
+    </section>
   );
 }

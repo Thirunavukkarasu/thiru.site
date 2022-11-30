@@ -1,10 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { RoughNotationGroup } from "react-rough-notation";
 
-import getLatestRepos from "@lib/getLatestRepos";
-import userData from "@constants/data";
-import { RainbowHighlight } from "@components/RainbowHighlight";
+import { userData } from "../constants/data";
+import { RainbowHighlight } from "../components/RainbowHighlight";
 
 export default function Home({ repositories }) {
   return (
@@ -17,19 +17,24 @@ export default function Home({ repositories }) {
 }
 
 function Hero() {
-  const highlights = [{
-    title: "Developer",
-    color: "#F59E0B"
-  }, {
-    title: "Architect",
-    color: "#84CC16"
-  }, {
-    title: "Youtuber",
-    color: "#10B981"
-  }, {
-    title: "Leader",
-    color: "#3B82F6"
-  }];
+  const highlights = [
+    {
+      title: "Developer",
+      color: "#F59E0B",
+    },
+    {
+      title: "Architect",
+      color: "#84CC16",
+    },
+    {
+      title: "Youtuber",
+      color: "#10B981",
+    },
+    {
+      title: "Leader",
+      color: "#3B82F6",
+    },
+  ];
 
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
@@ -48,7 +53,11 @@ function Hero() {
       {/* Image container */}
       <div className="hidden lg:block relative w-full md:w-1/2 -mr-40 mt-20">
         <div className="w-3/4">
-          <img src={userData.avatarUrl} alt="avatar" className="rounded-3xl shadow" />
+          <img
+            src={userData.avatarUrl}
+            alt="avatar"
+            className="rounded-3xl shadow"
+          />
         </div>
       </div>
     </div>
@@ -58,34 +67,34 @@ function Hero() {
 function FavouriteProjects() {
   const projects = [
     {
-      title: 'Project 1',
-      demoUrl: 'https://github.com/thirunavukkarasu',
-      imageUrl: './project1.png'
+      title: "Project 1",
+      demoUrl: "https://github.com/thirunavukkarasu",
+      imageUrl: "./project1.png",
     },
     {
-      title: 'Project 2',
-      demoUrl: 'https://github.com/thirunavukkarasu',
-      imageUrl: './project1.png'
+      title: "Project 2",
+      demoUrl: "https://github.com/thirunavukkarasu",
+      imageUrl: "./project1.png",
     },
     {
-      title: 'Project 3',
-      demoUrl: 'https://github.com/thirunavukkarasu',
-      imageUrl: './project1.png'
+      title: "Project 3",
+      demoUrl: "https://github.com/thirunavukkarasu",
+      imageUrl: "./project1.png",
     },
     {
-      title: 'Project 4',
-      demoUrl: 'https://github.com/thirunavukkarasu',
-      imageUrl: './project1.png'
+      title: "Project 4",
+      demoUrl: "https://github.com/thirunavukkarasu",
+      imageUrl: "./project1.png",
     },
     {
-      title: 'Project 5',
-      demoUrl: 'https://github.com/thirunavukkarasu',
-      imageUrl: './project1.png'
+      title: "Project 5",
+      demoUrl: "https://github.com/thirunavukkarasu",
+      imageUrl: "./project1.png",
     },
     {
-      title: 'Project 6',
-      demoUrl: 'https://github.com/thirunavukkarasu',
-      imageUrl: './project1.png'
+      title: "Project 6",
+      demoUrl: "https://github.com/thirunavukkarasu",
+      imageUrl: "./project1.png",
     },
   ];
 
@@ -96,10 +105,11 @@ function FavouriteProjects() {
           <h1 className="text-6xl lg:text-9xl max-w-3xl font-bold text-gray-600 my-20 md:my-0 text-center">
             Favourite Projects
           </h1>
-          <Link href="/projects">
-            <a className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center">
-              <p>View all</p>
-            </a>
+          <Link
+            href="/projects"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center"
+          >
+            <p>View all</p>
           </Link>
         </header>
 
@@ -126,7 +136,7 @@ function FavouriteProjects() {
                   </h1>
                 </div>
               </a>
-            )
+            );
           })}
         </div>
       </div>
@@ -135,11 +145,7 @@ function FavouriteProjects() {
 }
 
 function LatestCode({ repositories }) {
-  const [repos, setRepos] = useState([]);
-
-  useEffect(() => {
-    setRepos(repositories);
-  }, []);
+  const repos = repositories;
 
   return (
     <section className="bg-white pb-40">
@@ -171,9 +177,7 @@ function LatestCode({ repositories }) {
 const GithubRepoCard = ({ latestRepo }) => {
   return (
     <div className="github-repo">
-      <h1 className="font-semibold text-xl text-gray-700">
-        {latestRepo.name}
-      </h1>
+      <h1 className="font-semibold text-xl text-gray-700">{latestRepo.name}</h1>
       <p className="text-base font-normal my-4 text-gray-500">
         {latestRepo.description}
       </p>
@@ -189,16 +193,3 @@ const GithubRepoCard = ({ latestRepo }) => {
     </div>
   );
 };
-
-export const getServerSideProps = async () => {
-  let token = process.env.GITHUB_AUTH_TOKEN;
-
-  const repositories = await getLatestRepos(userData, token);
-
-  return {
-    props: {
-      repositories: repositories || [],
-    },
-  };
-};
-

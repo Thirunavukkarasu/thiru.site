@@ -1,4 +1,4 @@
-const userData = {
+export const userData = {
   githubUsername: "thirunavukkarasu",
   name: "Thirunavukkarasu",
   designation: "Full-Stack Developer and Architect",
@@ -77,4 +77,21 @@ const userData = {
   },
 };
 
-export default userData;
+export const navLinks = [
+  {
+    title: "About",
+    link: "/about",
+  },
+  {
+    title: "Projects",
+    link: "/projects",
+  },
+  {
+    title: "Experience",
+    link: "/experience",
+  },
+  {
+    title: "Contact",
+    link: "/contact",
+  },
+];

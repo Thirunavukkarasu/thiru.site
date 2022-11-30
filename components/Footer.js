@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
-import userData from "@constants/data";
+import { userData } from "../constants/data";
 
 export default function Footer() {
   return (
@@ -11,9 +11,7 @@ export default function Footer() {
             <p>&copy; Thirunavukkarasu. All Rights Reserved.</p>
           </div>
           <div>
-            <p>
-              Developed by Thirunavukkarasu
-            </p>
+            <p>Developed by Thirunavukkarasu</p>
           </div>
           <div className="flex flex-row items-center space-x-4">
             <a
@@ -36,7 +34,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </div >
-    </div >
+      </div>
+    </div>
   );
 }
