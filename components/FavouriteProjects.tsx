@@ -1,40 +1,35 @@
 import Link from "next/link";
-
-const { projects } = require("constants/data");
+import { works } from "constants/data";
 
 export default function FavouriteProjects() {
   return (
-    <div className="bg-gray-100 mt-10">
-      <div className="max-w-6xl mx-auto">
-        <header className="flex flex-col md:flex-row justify-between items-center pt-20 mx-10 md:my-20 lg:my-0">
-          <h1 className="text-6xl lg:text-9xl max-w-3xl font-bold text-gray-600 my-20 md:my-0 text-center">
+    <div className="bg-gray-800 text-white">
+      <div className="container mx-auto max-w-6xl py-20 space-y-10">
+        <div className="flex flex-row items-center justify-center space-x-20">
+          <h1 className="text-6xl lg:text-6xl text-center font-bold">
             Favourite Projects
           </h1>
           <Link
             href="/projects"
-            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center"
+            className="bg-green-300 text-gray-700 px-12 py-3 rounded-xl"
           >
-            <p>View all</p>
+            <p>View All</p>
           </Link>
-        </header>
+        </div>
 
         {/* Grid starts here */}
-        <div className="grid md:grid-cols-3 gap-8 lg:mt-8 pb-40">
-          {projects.map((project, idx) => {
+        <div className="grid md:grid-cols-3 gap-8">
+          {works.map((work, idx) => {
             return (
               <a
                 href="https://project1.com"
-                className="w-full block col-span-1 shadow-2xl"
+                className="w-full block border-2 border-green-300"
                 key={idx}
               >
-                <div className="relative overflow-hidden">
-                  <img
-                    src="/project1.png"
-                    alt="portfolio"
-                    className="transform hover:scale-125 transition duration-2000 ease-out"
-                  />
-                  <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                    {project.title}
+                <div className="relative">
+                  <img src="/project1.png" alt="portfolio" className="" />
+                  <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-green-500 rounded-md px-2">
+                    {work.title}
                   </h1>
                   <h1 className="absolute bottom-2 left-10 text-gray-50 font-bold text-xl">
                     {idx + 1}

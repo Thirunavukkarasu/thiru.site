@@ -3,13 +3,13 @@ import Footer from "../components/Footer";
 
 import "../styles/globals.css";
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
-    <html>
+    <html className="scroll-smooth">
       <head />
       <body>
         <Navbar />
-        {children}
+        <main className="relative">{children}</main>
         <Footer />
       </body>
     </html>

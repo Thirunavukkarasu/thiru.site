@@ -4,32 +4,10 @@ export const userData = {
   githubUsername: "thirunavukkarasu",
   name: "Thirunavukkarasu",
   designation: "Full-Stack Developer and Architect",
-  avatarUrl: "/avatar.jpg",
+  avatarUrl: "/avatar-2.png",
   email: "thirunavukkarasu.sam@gmail.com",
   phone: "+91 9789172265",
   address: "Bengaluru, Karnataka, India.",
-  projects: [
-    {
-      title: "Project 1",
-      link: "https://project1.com",
-      imgUrl: "/project1.png",
-    },
-    {
-      title: "Project 2",
-      link: "https://project2.in",
-      imgUrl: "/project2.png",
-    },
-    {
-      title: "Project 3",
-      link: "https://project3.in",
-      imgUrl: "/project3.png",
-    },
-    {
-      title: "Project 4",
-      link: "https://project4.in",
-      imgUrl: "/project4.png",
-    },
-  ],
   about: {
     title:
       "I'm a Prinicpal Architect & Developer that loves building products and web applications that matters",
@@ -78,12 +56,12 @@ export const navLinks = [
     link: "/about",
   },
   {
-    title: "Projects",
-    link: "/projects",
+    title: "Works",
+    link: "/works",
   },
   {
-    title: "Experience",
-    link: "/experience",
+    title: "Services",
+    link: "/services",
   },
   {
     title: "Contact",
@@ -98,20 +76,20 @@ export const socialLinks = [
     icon: <FaGithub />,
   },
   {
+    title: "Linkedin",
+    url: "https://linkedin.com/in/thirunavukkarasu-m",
+    icon: <FaLinkedin />,
+  },
+  /*{
     title: "Instagram",
     url: "https://instagram.com/thirunavukkarasu_ma",
     icon: <FaInstagram />,
   },
   {
-    title: "Linkedin",
-    url: "https://linkedin.com/in/thirunavukkarasu-m",
-    icon: <FaLinkedin />,
-  },
-  {
     title: "Twitter",
     url: "https://twitter.com/thiruhuman",
     icon: <FaTwitter />,
-  },
+  },*/
 ];
 
 export const projects = [
@@ -144,5 +122,38 @@ export const projects = [
     title: "Project 6",
     demoUrl: "https://github.com/thirunavukkarasu",
     imageUrl: "./project1.png",
+  },
+];
+
+export const works = [
+  {
+    title: "Order Assist",
+    link: "https://oa.thirunavukkarasu.com",
+    imgUrl: "/project1.png",
+  },
+  {
+    title: "One Meet",
+    link: "https://om.thirunavukkarasu.com",
+    imgUrl: "/project2.png",
+  },
+  {
+    title: "RNP",
+    link: "https://rnp.thirunavukkarasu.com",
+    imgUrl: "/project3.png",
+  },
+  {
+    title: "Personal Assistant",
+    link: "https://pa.thirunavukkarasu.com",
+    imgUrl: "/project4.png",
+  },
+  {
+    title: "NextJS Starter Kit",
+    link: "https://pa.thirunavukkarasu.com",
+    imgUrl: "/project4.png",
+  },
+  {
+    title: "TailwindCSS Starter Kit",
+    link: "https://pa.thirunavukkarasu.com",
+    imgUrl: "/project4.png",
   },
 ];
