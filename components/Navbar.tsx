@@ -1,12 +1,13 @@
+"use client";
+
 import React from "react";
-import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { navLinks, socialLinks } from "../constants/data";
+import Link from "next/link";
 
 export default function Navbar() {
-  const router = {
-    pathname: "/",
-  };
+  const pathName = usePathname();
 
   return (
     <div className="bg-gray-800 text-white py-6 border-b-2 border-gray-800 sticky top-0 z-50">
@@ -25,16 +26,22 @@ export default function Navbar() {
               <li
                 key={idx}
                 className={
-                  router?.pathname === navLink.link
+                  pathName === navLink.link
                     ? "text-green-400"
                     : "hover:text-green-300"
                 }
               >
-                <Link href={navLink.link}>{`<${navLink.title} />`}</Link>
+                <Link href={navLink.link}>
+                  {pathName === navLink.link
+                    ? `< ${navLink.title} >`
+                    : navLink.title}
+                </Link>
               </li>
             ))}
             <li className="hover:text-green-300">
-              <a href="https://blog.thirunavukkarasu.com">{`<Blog />`}</a>
+              <a href="https://blog.thirunavukkarasu.com" target="_blank">
+                Blog
+              </a>
             </li>
           </ul>
         </div>
