@@ -1,3 +1,5 @@
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+
 export const userData = {
   githubUsername: "thirunavukkarasu",
   name: "Thirunavukkarasu",
@@ -68,13 +70,6 @@ export const userData = {
     },
   ],
   resumeUrl: "",
-  socialLinks: {
-    instagram: "https://instagram.com/thirunavukkarasu_ma",
-    twitter: "https://twitter.com/thiruhuman",
-    linkedin: "https://linkedin.com/in/thirunavukkarasu-m",
-    github: "https://github.com/thirunavukkarasu",
-    facebook: "https://facebook.com/",
-  },
 };
 
 export const navLinks = [
@@ -93,5 +88,61 @@ export const navLinks = [
   {
     title: "Contact",
     link: "/contact",
+  },
+];
+
+export const socialLinks = [
+  {
+    title: "Github",
+    url: "https://github.com/thirunavukkarasu",
+    icon: <FaGithub />,
+  },
+  {
+    title: "Instagram",
+    url: "https://instagram.com/thirunavukkarasu_ma",
+    icon: <FaInstagram />,
+  },
+  {
+    title: "Linkedin",
+    url: "https://linkedin.com/in/thirunavukkarasu-m",
+    icon: <FaLinkedin />,
+  },
+  {
+    title: "Twitter",
+    url: "https://twitter.com/thiruhuman",
+    icon: <FaTwitter />,
+  },
+];
+
+export const projects = [
+  {
+    title: "Project 1",
+    demoUrl: "https://github.com/thirunavukkarasu",
+    imageUrl: "./project1.png",
+  },
+  {
+    title: "Project 2",
+    demoUrl: "https://github.com/thirunavukkarasu",
+    imageUrl: "./project1.png",
+  },
+  {
+    title: "Project 3",
+    demoUrl: "https://github.com/thirunavukkarasu",
+    imageUrl: "./project1.png",
+  },
+  {
+    title: "Project 4",
+    demoUrl: "https://github.com/thirunavukkarasu",
+    imageUrl: "./project1.png",
+  },
+  {
+    title: "Project 5",
+    demoUrl: "https://github.com/thirunavukkarasu",
+    imageUrl: "./project1.png",
+  },
+  {
+    title: "Project 6",
+    demoUrl: "https://github.com/thirunavukkarasu",
+    imageUrl: "./project1.png",
   },
 ];

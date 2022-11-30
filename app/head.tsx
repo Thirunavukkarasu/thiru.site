@@ -4,6 +4,7 @@ export default function Head() {
     description: `I've been developing websites for 7 years straight.`,
     image: "/avatar.jpg",
     type: "website",
+    date: "",
   };
 
   return (
