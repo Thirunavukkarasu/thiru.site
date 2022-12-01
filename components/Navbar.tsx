@@ -2,9 +2,38 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { FaCartPlus, FaPiggyBank, FaTwitter, FaUsers } from "react-icons/fa";
 
 import { navLinks, socialLinks } from "../constants/data";
-import Link from "next/link";
+import MenuDropdown from "./MenuDropdown";
+
+const domains = [
+  {
+    title: "Marketing Tech",
+    subTitle: "Lead Aggregation & Integration with CRMs",
+    icon: <FaTwitter />,
+    href: "/domains/marketing-tech",
+  },
+  {
+    title: "Sales Tech",
+    subTitle: "Attendance Tracking & Incentive Management",
+    icon: <FaUsers />,
+    href: "/domains/sales-tech",
+  },
+  {
+    title: "Supply Chain Tech",
+    subTitle: "Order Creation, Confirmation, Packing & Shipment Automation",
+    icon: <FaCartPlus />,
+    href: "/domains/supply-chain-tech",
+  },
+  {
+    title: "Fin Tech",
+    subTitle: "Loan Aggregation & Integration with various LOS Systems",
+    icon: <FaPiggyBank />,
+    href: "/domains/fin-tech",
+  },
+];
 
 export default function Navbar() {
   const pathName = usePathname();
@@ -32,12 +61,27 @@ export default function Navbar() {
                 }
               >
                 <Link href={navLink.link}>
-                  {pathName === navLink.link
+                  {pathName.includes(navLink.link)
                     ? `< ${navLink.title} >`
                     : navLink.title}
                 </Link>
               </li>
             ))}
+            <MenuDropdown title={"Domains"}>
+              <ul className="flex flex-col space-y-4">
+                {domains.map((domain, idx) => (
+                  <li key={idx}>
+                    <Link
+                      href={domain.href}
+                      className="flex flex-row space-x-2 items-center"
+                    >
+                      {domain.icon}
+                      <span>{domain.title}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </MenuDropdown>
             <li className="hover:text-green-300">
               <a href="https://blog.thirunavukkarasu.com" target="_blank">
                 Blog

@@ -1,5 +1,7 @@
-import { userData } from "constants/data";
+import Image from "next/image";
 import { FaAws, FaDatabase, FaNodeJs, FaReact } from "react-icons/fa";
+
+import avatarImg from "public/avatar-2.png";
 
 function HeroIconWrapper({ children, className }) {
   const commonCls =
@@ -33,8 +35,8 @@ export default function HeroSection() {
           {/* Image container */}
           <div className="mr-10 w-[40%]">
             <div className="relative">
-              <img
-                src={userData.avatarUrl}
+              <Image
+                src={avatarImg}
                 alt="avatar"
                 className="shadow rounded-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700"
               />

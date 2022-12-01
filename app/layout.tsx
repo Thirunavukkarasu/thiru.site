@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <Navbar />
-        <main className="relative">{children}</main>
+        <main className="relative min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
