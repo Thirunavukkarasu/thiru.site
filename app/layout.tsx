@@ -1,17 +1,49 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import '../styles/global.css'
 
-import "../styles/globals.css";
+import { Metadata } from 'next'
+import { Providers } from './providers'
+import Navbar from 'ui/navbar'
+import { Analytics } from '@/ui/analytics'
 
-export default function RootLayout({ children }) {
+export const metadata: Metadata = {
+  title: {
+    default: 'Thirunavukkarasu',
+    template: '%s | Thirunavukkarasu',
+  },
+  description: 'Developer, Engineering Leader, and Dad.',
+  keywords: [
+    'Thirunavukkarasu',
+    'Full Stack Developer',
+    'Engineering Leader',
+    'Next.js',
+    'React',
+    'Tailwind CSS',
+    'Server Components',
+  ],
+  authors: [
+    {
+      name: 'thirunavukkarasu',
+      url: 'https://thirunavukkarasu.com',
+    },
+  ],
+  creator: 'thirunavukkarasu',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html className="scroll-smooth">
+    <html suppressHydrationWarning>
       <head />
-      <body>
-        <Navbar />
-        <main className="relative min-h-screen">{children}</main>
-        <Footer />
+      <body className="mx-auto max-w-5xl">
+        <Providers>
+          <Navbar />
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
-  );
+  )
 }

@@ -1,148 +1,57 @@
-import React from "react";
-import { userData } from "../../constants/data";
+import Image from 'next/image'
+import portraitImage from '../../public/avatars/thiru.jpg'
 
-export default function AboutMe() {
-  const socialLinks = [
-    { title: "LinkedIn" },
-    { title: "Github" },
-    { title: "Facebook" },
-    {
-      title: "Instagram",
-    },
-  ];
+export default function About() {
   return (
-    <section className="bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold py-10 text-center md:text-left">
-          About Me.
-        </h1>
-      </div>
-      <div className="">
-        <div className="text-container max-w-6xl mx-auto py-5 border-b-2 border-gray-500">
-          <p className="leading-loose text-xl font-medium">
-            {userData.about.title}. <br />
-            Currently working on{" "}
-            <a
-              className="bg-red-500 rounded-md px-2 py-1 text-white"
-              href={userData.about.currentProjectUrl}
-            >
-              {userData.about.currentProject} ✈️
-            </a>
-          </p>
-        </div>
-      </div>
-      <div className="bg-gray-900 text-white px-4">
-        <div className="pt-10 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
-          {/* Social Buttons */}
-          <div className="inline-flex flex-col">
-            <div>
-              <h1 className="text-xl font-semibold">Contact</h1>
-              <p className="text-lg mt-4">
-                For any sort help / enquiry, shoot a{" "}
-                <a href={`mailto:${userData.email}`} className="font-bold">
-                  mail
-                </a>{" "}
-                and I'll get back. I swear.
-              </p>
-            </div>
-            <div className="mt-8">
-              <h1 className="text-xl font-semibold ">Job Opportunities</h1>
-              <p className="text-lg mt-4 ">
-                I'm looking for a job currently, If you see me as a good fit,
-                check my{" "}
-                <a
-                  href={userData.resumeUrl}
-                  target="__blank"
-                  className="font-bold"
-                >
-                  CV
-                </a>{" "}
-                and I'd love to work for you.
-              </p>
-            </div>
-            {/* Social Links */}
-            <h1 className="text-xl font-semibold mt-8 ">Social Links</h1>
-            {socialLinks.map((socialLink, idx) => (
-              <div className="mt-4 ml-4" key={idx}>
-                <div className="flex flex-row justify-start items-center ">
-                  <a
-                    href={"/"}
-                    className="flex flex-row items-center space-x-4 group"
-                  >
-                    <div className="my-4">-</div>
-                    <p className="text-lg font-mono relative overflow-hidden">
-                      <span className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></span>
-                      {socialLink.title}
-                    </p>
-                  </a>
-                </div>
-              </div>
-            ))}
+    <div className="mt-10">
+      <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+        <div className="lg:pl-20">
+          <div className="max-w-xs px-2.5 lg:max-w-none">
+            <Image
+              src={portraitImage}
+              alt=""
+              sizes="(min-width: 1024px) 32rem, 20rem"
+              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+            />
           </div>
-          {/* Text area */}
-          <div className="col-span-1 md:col-span-2 ">
-            {userData?.about?.description?.map((desc, idx) => (
-              <p key={idx} className="text-xl mb-4">
-                {desc}
-              </p>
-            ))}
-
-            <h1 className="bg-red-500 text-3xl rounded-md px-2 py-1 inline-block font-bold text-gray-50">
-              Tech Stack
-            </h1>
-            <div className="flex flex-row flex-wrap mt-8 border-2 border-gray-700 bg-gradient-to-t from-gray-800 via-gray-700 to-gray-600">
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/angular/angular.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/firebase/firebase.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-            </div>
+        </div>
+        <div className="lg:order-first lg:row-span-2">
+          <h1 className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">
+            I’m Thirunavukkarasu. I live in Bengaluru City, where I develop the
+            future.
+          </h1>
+          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <p>
+              {`Greetings, I'm Thiru, a triple threat in the tech world.
+                I'm a skilled developer, experienced engineering leader, and
+                dad. With 12 years of experience under my
+                belt, I've learned to master the art of multitasking and still
+                produce top-notch results.`}
+            </p>
+            <p>
+              {`I'm a coding ninja with a passion for making the impossible,
+                possible. I excel in MERN & PERN Stack and I'm always up for a
+                challenge, the tougher the better. My work is quick, efficient,
+                and always delivered with a chuckle (because laughter is the
+                best medicine, even for tight deadlines).`}
+            </p>
+            <p>
+              {`As an engineering manager, I'm the captain of the ship, steering
+                projects to success and guiding my team to greatness. I'm a
+                gifted communicator and a problem-solving wizard, and I have the
+                ability to break down complex issues into manageable tasks.`}
+            </p>
+            <p>
+              {`As a working mom, I'm a pro at juggling a million balls at once.
+                I've honed my time-management skills to perfection and I know
+                how to prioritize my responsibilities to make sure both work and
+                family receive the attention they deserve. I bring the same
+                level of dedication and discipline to my professional life, and
+                I'm always eager for a new adventure.`}
+            </p>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  )
 }
