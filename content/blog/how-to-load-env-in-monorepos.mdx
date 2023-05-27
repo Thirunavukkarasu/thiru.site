@@ -1,0 +1,28 @@
+---
+title: How to load env in monorepos?
+description: Loading .env files in monorepos like Turborepo
+image: /blog/env.jpg
+date: '2023-05-27'
+authors:
+  - thiru
+---
+
+When working with monorepos, loading environment variables can be a bit tricky. In this blog post, we will explore some ways to validate and load .env files in monorepos.
+
+### Load .env files using dotenv
+
+One way to load .env files in a monorepo is by using [dotenv](https://www.npmjs.com/package/dotenv). dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. You can create a .env file for each package in your monorepo and load them using dotenv.
+
+### Use environment variables provided by CI/CD tools
+
+If you are using continuous integration and deployment (CI/CD) tools, such as Travis CI or CircleCI, you can set environment variables in your CI/CD tool's settings. This way, you don't have to worry about loading .env files in your monorepo.
+
+### Use a package manager
+
+Some package managers, such as Yarn Workspaces, allow you to define environment variables for your monorepo. You can define environment variables in your package.json file and access them in your code using process.env.
+
+### Write a custom script
+
+If none of the above methods work for you, you can write a custom script to load .env files in your monorepo. This script can use a monorepo configuration file to find all the .env files and load them into process.env.
+
+In conclusion, there are several ways to load .env files in monorepos. You can use dotenv, environment variables provided by CI/CD tools, a package manager, or a custom script. Choose the method that works best for your monorepo and ensure that your environment variables are loaded securely.

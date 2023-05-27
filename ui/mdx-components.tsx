@@ -85,7 +85,7 @@ const components = {
   blockquote: ({ className, ...props }) => (
     <blockquote
       className={cn(
-        '[&>*]:text-muted-foreground mt-6 border-l-2 pl-6 italic',
+        'mt-6 border-l-2 pl-6 italic [&>*]:text-gray-500',
         className
       )}
       {...props}

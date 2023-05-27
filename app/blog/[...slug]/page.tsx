@@ -84,14 +84,11 @@ export default async function PostPage({ params }: PostPageProps) {
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <div>
         {post.date && (
-          <time
-            dateTime={post.date}
-            className="text-muted-foreground block text-sm"
-          >
+          <time dateTime={post.date} className="block text-sm text-gray-500">
             Published on {formatDate(post.date)}
           </time>
         )}
-        <h1 className="font-heading mt-2 inline-block text-4xl leading-tight lg:text-5xl">
+        <h1 className="mt-2 inline-block text-3xl leading-tight text-gray-700">
           {post.title}
         </h1>
         {authors?.length ? (
@@ -112,7 +109,7 @@ export default async function PostPage({ params }: PostPageProps) {
                   />
                   <div className="flex-1 text-left leading-tight">
                     <p className="font-medium">{author.title}</p>
-                    <p className="text-muted-foreground text-[12px]">
+                    <p className="text-[12px] text-gray-500">
                       @{author.twitter}
                     </p>
                   </div>

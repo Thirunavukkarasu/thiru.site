@@ -16,38 +16,44 @@ export default async function BlogPage() {
     })
 
   return (
-    <div className="container max-w-4xl py-6 lg:py-10">
-      <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
-        <div className="flex-1 space-y-4">
-          <h1 className=" inline-block text-3xl font-semibold tracking-tight lg:text-3xl">
+    <div className="container max-w-4xl">
+      <div className="flex flex-col">
+        <div className="flex-1 space-y-2">
+          <h1 className="inline-block text-lg font-semibold tracking-tight text-gray-700 lg:text-xl">
             Blog
           </h1>
-          <p className="text-muted-foreground text-xl">
+          <p className="text-base text-gray-500">
             Dive into My Adventures: A Collection of Explorations and
             Discoveries..
           </p>
         </div>
       </div>
-      <hr className="my-8" />
+      <hr className="my-4" />
       {posts?.length ? (
-        <div className="grid gap-10 sm:grid-cols-2">
+        <div className="grid gap-4">
           {posts.map((post) => (
             <article
               key={post._id}
-              className="group relative flex flex-col space-y-2 border border-gray-300 p-4"
+              className="group relative flex flex-row justify-between space-y-2 border-gray-200 py-2"
             >
-              <h2 className="text-2xl font-extrabold">{post.title}</h2>
-              {post.description && (
-                <p className="text-muted-foreground">{post.description}</p>
-              )}
-              {post.date && (
-                <p className="text-muted-foreground text-sm">
-                  {formatDate(post.date)}
-                </p>
-              )}
-              <Link href={post.slug} className="absolute inset-0">
-                <span className="sr-only">View Article</span>
-              </Link>
+              <div>
+                <h2 className="text-base font-bold text-gray-700 underline">
+                  {post.title}
+                </h2>
+                {post.description && (
+                  <p className="text-gray-500">{post.description}</p>
+                )}
+              </div>
+              <div>
+                {post.date && (
+                  <p className="text-sm text-gray-500">
+                    {formatDate(post.date)}
+                  </p>
+                )}
+                <Link href={post.slug} className="absolute inset-0">
+                  <span className="sr-only">View Article</span>
+                </Link>
+              </div>
             </article>
           ))}
         </div>

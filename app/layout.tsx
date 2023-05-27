@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import { Providers } from './providers'
 import Navbar from 'ui/navbar'
 import { Analytics } from '@/ui/analytics'
+import Footer from './footer'
 
 export const metadata: Metadata = {
   title: {
@@ -37,10 +38,12 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <head />
-      <body className="mx-auto max-w-5xl">
+      <body>
         <Providers>
           <Navbar />
-          {children}
+          <div className="mb-10 border-b"></div>
+          <div className="mx-auto min-h-screen max-w-5xl">{children}</div>
+          <Footer />
           <Analytics />
         </Providers>
       </body>

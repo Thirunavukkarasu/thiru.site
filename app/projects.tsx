@@ -34,27 +34,31 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="my-10">
-      <h1 className="text-2xl font-semibold">Projects</h1>
-      <p className="text-gray-600">
+    <section className="">
+      <h1 className="text-lg font-semibold text-gray-700">Projects</h1>
+      <p className="text-base text-gray-600">
         Creations between playtime with my small one.
       </p>
       <div className="mt-5">
-        <div className="grid gap-10 sm:grid-cols-3">
+        <div className="grid gap-4">
           {projects.map((project) => (
             <article
               key={project._id}
-              className="group relative flex flex-col space-y-2 border border-gray-300 p-4"
+              className="group relative flex flex-row items-center justify-between space-y-2"
             >
-              <div className="flex items-center space-x-3">
-                <h2 className="text-2xl font-extrabold">{project.title}</h2>
-                <ArrowIcon />
+              <div>
+                <h2 className="text-base font-extrabold text-gray-700 underline">
+                  {project.title}
+                </h2>
+                {project.description && (
+                  <p className="max-w-3xl text-gray-500">
+                    {project.description}
+                  </p>
+                )}
               </div>
-              {project.description && (
-                <p className="text-muted-foreground">{project.description}</p>
-              )}
+
               {project.date && (
-                <p className="text-muted-foreground text-sm">
+                <p className="text-sm text-gray-500">
                   {formatDate(project.date)}
                 </p>
               )}

@@ -41,14 +41,6 @@ export default function About() {
                 gifted communicator and a problem-solving wizard, and I have the
                 ability to break down complex issues into manageable tasks.`}
             </p>
-            <p>
-              {`As a working mom, I'm a pro at juggling a million balls at once.
-                I've honed my time-management skills to perfection and I know
-                how to prioritize my responsibilities to make sure both work and
-                family receive the attention they deserve. I bring the same
-                level of dedication and discipline to my professional life, and
-                I'm always eager for a new adventure.`}
-            </p>
           </div>
         </div>
       </div>

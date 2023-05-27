@@ -12,31 +12,37 @@ export default function RecentPosts() {
   const recentPosts = posts.slice(0, 3)
 
   return (
-    <section className="my-10">
-      <h1 className="text-2xl font-semibold">Recent Posts</h1>
-      <p className="text-gray-600">
+    <section className="">
+      <h1 className="text-lg font-semibold text-gray-700">Recent Posts</h1>
+      <p className="text-base text-gray-600">
         Dive into My Adventures: A Collection of Explorations and Discoveries..
       </p>
       <div className="mt-5">
         {recentPosts?.length ? (
-          <div className="grid gap-10 sm:grid-cols-3">
+          <div className="grid gap-4">
             {recentPosts.map((post) => (
               <article
                 key={post._id}
-                className="group relative flex flex-col space-y-2 border-2 rounded-md border-gray-800 p-4"
+                className="group relative flex flex-row justify-between space-y-2 border-gray-200 py-2"
               >
-                <h2 className="text-2xl font-extrabold">{post.title}</h2>
-                {post.description && (
-                  <p className="text-muted-foreground">{post.description}</p>
-                )}
-                {post.date && (
-                  <p className="text-muted-foreground text-sm">
-                    {formatDate(post.date)}
-                  </p>
-                )}
-                <Link href={post.slug} className="absolute inset-0">
-                  <span className="sr-only">View Article</span>
-                </Link>
+                <div>
+                  <h2 className="text-base font-bold text-gray-700 underline">
+                    {post.title}
+                  </h2>
+                  {post.description && (
+                    <p className="text-gray-500">{post.description}</p>
+                  )}
+                </div>
+                <div>
+                  {post.date && (
+                    <p className="text-sm text-gray-500">
+                      {formatDate(post.date)}
+                    </p>
+                  )}
+                  <Link href={post.slug} className="absolute inset-0">
+                    <span className="sr-only">View Article</span>
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
