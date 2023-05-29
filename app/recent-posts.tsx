@@ -44,7 +44,11 @@ export default function RecentPosts() {
                       <ViewCounter slug={post.slug} />
                     </>
                   )}
-                  <Link href={post.slug} className="absolute inset-0">
+                  <Link
+                    href={post.slug}
+                    className="absolute inset-0"
+                    prefetch={false}
+                  >
                     <span className="sr-only">View Article</span>
                   </Link>
                 </div>
