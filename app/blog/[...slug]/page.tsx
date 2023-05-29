@@ -93,6 +93,7 @@ export default async function PostPage({ params }: PostPageProps) {
             <time dateTime={post.date} className="block text-sm text-gray-500">
               Published on {formatDate(post.date)}
             </time>
+            {/* @ts-expect-error Async Server Component */}
             <ViewCounter slug={post.slug} />
           </div>
         )}

@@ -27,6 +27,7 @@ async function BlogPost({ post }: any) {
         {post.date && (
           <>
             <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
+            {/* @ts-expect-error Async Server Component */}
             <ViewCounter slug={post.slug} />
           </>
         )}
@@ -61,7 +62,10 @@ export default async function BlogPage() {
       {posts?.length ? (
         <div className="grid gap-4">
           {posts.map((post) => (
-            <BlogPost post={post} key={post._id} />
+            <>
+              {/* @ts-expect-error Async Server Component */}
+              <BlogPost post={post} key={post._id} />
+            </>
           ))}
         </div>
       ) : (

@@ -40,6 +40,7 @@ export default function RecentPosts() {
                       <p className="text-sm text-gray-500">
                         {formatDate(post.date)}
                       </p>
+                      {/* @ts-expect-error Async Server Component */}
                       <ViewCounter slug={post.slug} />
                     </>
                   )}

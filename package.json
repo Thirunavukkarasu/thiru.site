@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "i-dev": "infisical run -- next dev",
+    "i-build": "infisical run -- next build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -29,10 +30,6 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rehype-autolink-headings": "^6.1.1",
-    "rehype-pretty-code": "^0.9.2",
-    "rehype-slug": "^5.1.0",
-    "remark-gfm": "^3.0.1",
     "server-only": "^0.0.1",
     "shiki": "^0.13.0",
     "swr": "^2.0.3",
@@ -41,9 +38,9 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
     "autoprefixer": "^10.4.13",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.2",
@@ -51,6 +48,12 @@
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
     "tailwindcss": "^3.2.4",
-    "typescript": "4.9.4"
+    "rehype": "^12.0.1",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-pretty-code": "^0.9.5",
+    "rehype-slug": "^5.1.0",
+    "remark": "^14.0.2",
+    "remark-gfm": "^3.0.1",
+    "typescript": "^4.9.5"
   }
 }
