@@ -3,11 +3,40 @@ import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 
 import { formatDate } from '@/lib/utils'
+import ViewCounter from '../view-counter'
 
 export const metadata = {
   title: 'Blog',
 }
 
+async function BlogPost({ post }: any) {
+  return (
+    <article
+      key={post._id}
+      className="group relative flex flex-row justify-between space-y-2 border-gray-200 py-2"
+    >
+      <div>
+        <h2 className="text-base font-bold text-gray-700 underline">
+          {post.title}
+        </h2>
+        {post.description && (
+          <p className="text-gray-500">{post.description}</p>
+        )}
+      </div>
+      <div>
+        {post.date && (
+          <>
+            <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
+            <ViewCounter slug={post.slug} />
+          </>
+        )}
+        <Link href={post.slug} className="absolute inset-0">
+          <span className="sr-only">View Article</span>
+        </Link>
+      </div>
+    </article>
+  )
+}
 export default async function BlogPage() {
   const posts = allPosts
     .filter((post) => post.published)
@@ -32,29 +61,7 @@ export default async function BlogPage() {
       {posts?.length ? (
         <div className="grid gap-4">
           {posts.map((post) => (
-            <article
-              key={post._id}
-              className="group relative flex flex-row justify-between space-y-2 border-gray-200 py-2"
-            >
-              <div>
-                <h2 className="text-base font-bold text-gray-700 underline">
-                  {post.title}
-                </h2>
-                {post.description && (
-                  <p className="text-gray-500">{post.description}</p>
-                )}
-              </div>
-              <div>
-                {post.date && (
-                  <p className="text-sm text-gray-500">
-                    {formatDate(post.date)}
-                  </p>
-                )}
-                <Link href={post.slug} className="absolute inset-0">
-                  <span className="sr-only">View Article</span>
-                </Link>
-              </div>
-            </article>
+            <BlogPost post={post} key={post._id} />
           ))}
         </div>
       ) : (

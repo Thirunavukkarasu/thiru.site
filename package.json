@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "i-dev": "infisical run -- next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -16,6 +17,7 @@
     "@tailwindcss/typography": "^0.5.4",
     "@vercel/analytics": "^0.1.11",
     "@vercel/edge-config": "^0.1.1",
+    "@vercel/kv": "^0.2.1",
     "@vercel/og": "^0.0.27",
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.2",

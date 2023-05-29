@@ -16,7 +16,7 @@ export default function About() {
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-700 dark:text-zinc-100 sm:text-3xl">
             I’m Thirunavukkarasu. I live in Bengaluru City, where I develop the
             future.
           </h1>

@@ -1,11 +1,14 @@
-import { notFound } from 'next/navigation'
-import { allAuthors, allPosts } from 'contentlayer/generated'
-import Link from 'next/link'
-import { ArrowIcon } from 'ui/icons'
-import Image from 'next/image'
-import { Mdx } from '@/ui/mdx-components'
 import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import Image from 'next/image'
+import { kv } from '@vercel/kv'
+import { allAuthors, allPosts } from 'contentlayer/generated'
+
+import { ArrowIcon } from '@/ui/icons'
+import { Mdx } from '@/ui/mdx-components'
 import { absoluteUrl, formatDate } from '@/lib/utils'
+import ViewCounter from '@/app/view-counter'
 
 interface PostPageProps {
   params: {
@@ -70,7 +73,9 @@ export async function generateMetadata({
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const post = await getPostFromParams(params)
+  const post: any = await getPostFromParams(params)
+  //Note: Using Vercel KV Increment view counter slug value by One
+  await kv.incr(post.slug)
 
   if (!post) {
     notFound()
@@ -84,9 +89,12 @@ export default async function PostPage({ params }: PostPageProps) {
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <div>
         {post.date && (
-          <time dateTime={post.date} className="block text-sm text-gray-500">
-            Published on {formatDate(post.date)}
-          </time>
+          <div className="flex space-x-3">
+            <time dateTime={post.date} className="block text-sm text-gray-500">
+              Published on {formatDate(post.date)}
+            </time>
+            <ViewCounter slug={post.slug} />
+          </div>
         )}
         <h1 className="mt-2 inline-block text-3xl leading-tight text-gray-700">
           {post.title}

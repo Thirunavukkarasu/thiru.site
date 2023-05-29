@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 import { formatDate } from '@/lib/utils'
+import ViewCounter from './view-counter'
 
 export default function RecentPosts() {
   const posts = allPosts
@@ -35,9 +36,12 @@ export default function RecentPosts() {
                 </div>
                 <div>
                   {post.date && (
-                    <p className="text-sm text-gray-500">
-                      {formatDate(post.date)}
-                    </p>
+                    <>
+                      <p className="text-sm text-gray-500">
+                        {formatDate(post.date)}
+                      </p>
+                      <ViewCounter slug={post.slug} />
+                    </>
                   )}
                   <Link href={post.slug} className="absolute inset-0">
                     <span className="sr-only">View Article</span>
