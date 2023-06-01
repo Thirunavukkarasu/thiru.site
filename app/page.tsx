@@ -1,6 +1,7 @@
 import RecentPosts from './recent-posts'
 import Projects from './projects'
 import SocialLinks from './social-links'
+import Subscribe from './Subscribe'
 
 export default function page() {
   return (
@@ -38,6 +39,7 @@ export default function page() {
       <RecentPosts />
       <div className="my-4 border-b"></div>
       <Projects />
+      <Subscribe />
     </>
   )
 }
