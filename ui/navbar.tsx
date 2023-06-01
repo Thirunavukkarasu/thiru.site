@@ -15,7 +15,9 @@ export default function Navbar() {
           <li className="cursor-pointer text-base">
             <Link href="/about">about</Link>
           </li>
-          <li className="cursor-pointer text-base">guestbook</li>
+          <li className="cursor-pointer text-base">
+            <Link href="/guestbook">guestbook</Link>
+          </li>
         </ul>
       </div>
     </nav>
