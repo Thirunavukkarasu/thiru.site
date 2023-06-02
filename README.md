@@ -9,6 +9,30 @@
 - **Deployment**: [Vercel](https://vercel.com)
 - **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
 
+## Features
+
+- New `/app` dir,
+- Routing, Layouts, Nested Layouts and Layout Groups
+- Data Fetching, Caching and Mutation
+- Loading UI
+- Route handlers
+- Metadata files
+- Server and Client Components
+- API Routes and Middlewares
+- Authentication using **NextAuth.js**
+- ORM using **Prisma**
+- Database on **PlanetScale**
+- UI Components built using **Radix UI**
+- Documentation and blog using **MDX** and **Contentlayer**
+- Styled using **Tailwind CSS**
+- Validations using **Zod**
+- Written in **TypeScript**
+
+## Roadmap
+
+- [x] Responsive styles~
+- [x] Dark mode
+
 ## Running Locally
 
 This application requires Node.js v18+.

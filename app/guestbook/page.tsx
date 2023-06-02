@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { getServerSession } from 'next-auth/next'
-import { authOptions } from 'pages/api/auth/[...nextauth]'
+import { authOptions } from '@/lib/auth'
 import { SignIn, SignOut } from './actions'
 import Form from './form'
 import { prisma } from '@/lib/prisma'
