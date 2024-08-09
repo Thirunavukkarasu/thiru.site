@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import React from "react";
+import React, { Fragment } from "react";
 
 const data = [
   {
@@ -37,8 +37,8 @@ export default function page() {
     <>
       <h1 className="text-3xl">my work</h1>
       {data.map((item, index) => (
-        <>
-          <div key={index} className="mb-4 border-0 shadow-none m-0">
+        <Fragment key={index}>
+          <div className="mb-4 border-0 shadow-none m-0">
             <div className="flex flex-col space-y-1.5 py-6">
               <h3 className="text-xl font-semibold leading-none tracking-tight">
                 <a href={item.link}>{item.title}</a>
@@ -49,11 +49,14 @@ export default function page() {
             </div>
             <div className="py-6 pt-0 space-y-4">
               <p>{item.content.summary}</p>
-              <p>{item.content.technologies}</p>
+              <p className="space-x-2 text-gray-600">
+                <span>Technologies:</span>
+                <span>{item.content.technologies}</span>
+              </p>
             </div>
           </div>
           <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        </>
+        </Fragment>
       ))}
     </>
   );

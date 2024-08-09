@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -66,4 +71,14 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+html {
+  min-width: 360px;
 }
