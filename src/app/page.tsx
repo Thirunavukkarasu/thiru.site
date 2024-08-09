@@ -1,4 +1,4 @@
-import { GitHubIcon, TwitterIcon, YoutubeIcon } from "@/ui/icons";
+import { GitHubIcon, TwitterIcon, YoutubeIcon } from "@/components/icons";
 
 export default function Home() {
   return (
