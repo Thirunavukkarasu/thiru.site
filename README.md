@@ -4,10 +4,7 @@
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com)
-- **Authentication**: [NextAuth.js](https://next-auth.js.org)
-- **Database**: [PlanetScale](https://planetscale.com)
 - **Deployment**: [Vercel](https://vercel.com)
-- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
 
 ## Features
 
@@ -19,9 +16,6 @@
 - Metadata files
 - Server and Client Components
 - API Routes and Middlewares
-- Authentication using **NextAuth.js**
-- ORM using **Prisma**
-- Database on **PlanetScale**
 - UI Components built using **Radix UI**
 - Documentation and blog using **MDX** and **Contentlayer**
 - Styled using **Tailwind CSS**
