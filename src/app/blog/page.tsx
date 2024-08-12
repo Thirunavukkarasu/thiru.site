@@ -1,36 +1,11 @@
 import Link from "next/link";
 import { compareDesc } from "date-fns";
 import { formatDate } from "@/lib/date";
+import { getBlogPosts } from "../db/blog";
 
 export const metadata = {
   title: "Blog",
 };
-const allPosts: any = [
-  {
-    _id: "1",
-    title: "First Post",
-    description: "This is the first post.",
-    date: "2021-01-01",
-    slug: "first-post",
-    published: true,
-  },
-  {
-    _id: "2",
-    title: "Second Post",
-    description: "This is the second post.",
-    date: "2021-02-01",
-    slug: "second-post",
-    published: true,
-  },
-  {
-    _id: "3",
-    title: "Third Post",
-    description: "This is the third post.",
-    date: "2021-03-01",
-    slug: "third-post",
-    published: true,
-  },
-];
 
 async function BlogPost({ post }: any) {
   return (
@@ -40,10 +15,10 @@ async function BlogPost({ post }: any) {
     >
       <div>
         <h2 className="text-base font-bold text-gray-700 underline">
-          {post.title}
+          {post.metadata.title}
         </h2>
-        {post.description && (
-          <p className="text-gray-500">{post.description}</p>
+        {post.metadata.summary && (
+          <p className="text-gray-500">{post.metadata.summary}</p>
         )}
       </div>
       <div>
@@ -65,11 +40,17 @@ async function BlogPost({ post }: any) {
   );
 }
 export default async function BlogPage() {
-  const posts = allPosts
-    .filter((post: any) => post.published)
-    .sort((a: any, b: any) => {
-      return compareDesc(new Date(a.date), new Date(b.date));
-    });
+  let allPosts = getBlogPosts();
+  const posts = allPosts.sort((a, b) => {
+    if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
+      return -1;
+    }
+    return 1;
+  });
+  // .filter((post: any) => post.published)
+  // .sort((a: any, b: any) => {
+  // return compareDesc(new Date(a.date), new Date(b.date));
+  // });
 
   return (
     <div className="">
@@ -86,10 +67,8 @@ export default async function BlogPage() {
       <hr className="my-4" />
       {posts?.length ? (
         <div className="grid gap-4">
-          {posts.map((post: any) => (
-            <>
-              <BlogPost post={post} key={post._id} />
-            </>
+          {posts.map((post: any, idx: any) => (
+            <BlogPost post={post} key={idx} />
           ))}
         </div>
       ) : (
