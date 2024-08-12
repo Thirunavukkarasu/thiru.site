@@ -4,12 +4,10 @@ export default function Home() {
   return (
     <>
       <section className="space-y-2">
-        <h1 className="text-xl font-bold text-gray-700">
-          hey, I&apos;m Thiru 👋
-        </h1>
+        <h1 className="text-xl font-bold text-gray-700">hey, I'm Thiru 👋</h1>
         <h4 className="text-lg text-gray-600"></h4>
         <p className="max-w-2xl text-gray-500">
-          I&apos;m a full-stack developer and technlogy enthusiast hailing from
+          I'm a full-stack developer and technlogy enthusiast hailing from
           India. I currently work as a VP of Engineering at{" "}
           <a href="https://mantys.in" className="text-yellow-900 underline">
             Mantys

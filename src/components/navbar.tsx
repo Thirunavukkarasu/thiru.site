@@ -11,16 +11,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-4">
           <ul className="flex flex-row space-x-6 pr-10">
             <li className="cursor-pointer text-base">
-              <Link href="/">home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="cursor-pointer text-base">
-              <Link href="/work">work</Link>
+              <Link href="/work">Work</Link>
             </li>
             <li className="cursor-pointer text-base">
-              <Link href="/blog">blog</Link>
+              <Link href="/blog">Blog</Link>
             </li>
             <li className="cursor-pointer text-base">
-              <Link href="/guestbook">guestbook</Link>
+              <Link href="/guestbook">Guestbook</Link>
             </li>
           </ul>
         </div>
