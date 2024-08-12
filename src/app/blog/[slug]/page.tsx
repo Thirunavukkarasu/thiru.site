@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import { unstable_noStore as noStore } from "next/cache";
 import { getBlogPosts } from "@/app/db/blog";
 import { CustomMDX } from "@/components/mdx";
+import Link from "next/link";
+import { ArrowIcon } from "@/components/icons";
+import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -123,9 +126,26 @@ export default function Blog({ params }: any) {
           <Views slug={post.slug} />
         </Suspense> */}
       </div>
+      {post.metadata.image && (
+        <Image
+          src={post.metadata.image}
+          alt={post.metadata.title}
+          width={720}
+          height={405}
+          className="bg-muted my-8 rounded-md border transition-colors"
+          priority
+        />
+      )}
       <article className="prose prose-quoteless prose-neutral dark:prose-invert">
         <CustomMDX source={post.content} />
       </article>
+      <hr className="mt-12" />
+      <div className="flex justify-center py-6 lg:py-10">
+        <Link href="/blog" className="inline-flex">
+          <ArrowIcon />
+          <span>See all posts</span>
+        </Link>
+      </div>
     </section>
   );
 }
