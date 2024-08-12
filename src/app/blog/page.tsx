@@ -47,10 +47,6 @@ export default async function BlogPage() {
     }
     return 1;
   });
-  // .filter((post: any) => post.published)
-  // .sort((a: any, b: any) => {
-  // return compareDesc(new Date(a.date), new Date(b.date));
-  // });
 
   return (
     <div className="">

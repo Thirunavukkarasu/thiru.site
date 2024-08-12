@@ -185,3 +185,7 @@ table {
 .title {
   text-wrap: balance;
 }
+
+a {
+  @apply text-orange-800;
+}

@@ -1,4 +1,7 @@
 import { GitHubIcon, TwitterIcon, YoutubeIcon } from "@/components/icons";
+import Subscribe from "./subscribe";
+import Projects from "./projects";
+import RecentPosts from "./recent-posts";
 
 export default function Home() {
   return (
@@ -17,10 +20,10 @@ export default function Home() {
         <SocialLinks />
       </section>
       <div className="my-4 border-b"></div>
-      {/* <RecentPosts /> */}
+      <RecentPosts />
       <div className="my-4 border-b"></div>
-      {/* <Projects /> */}
-      {/* <Subscribe /> */}
+      <Projects />
+      <Subscribe />
     </>
   );
 }
