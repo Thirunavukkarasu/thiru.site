@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getBlogPosts } from "./db/blog";
 import { formatDate } from "@/lib/date";
+import ViewCounter from "./view-counter";
 
 export default function RecentPosts() {
   const posts = getBlogPosts().sort((a, b) => {
@@ -39,9 +40,9 @@ export default function RecentPosts() {
                       {/* <p className="text-sm text-gray-500">
                         {formatDate(post.metadata.publishedAt)}
                       </p> */}
-                      {/* <ViewCounter slug={post.slug} /> */}
                     </>
                   )}
+                  <ViewCounter slug={post.slug} />
                   <Link
                     href={`blog/${post.slug}`}
                     className="absolute inset-0"

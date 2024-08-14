@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
@@ -63,6 +64,7 @@ export default function RootLayout({
             </div>
           </div>
         </main>
+        <Analytics />
       </body>
     </html>
   );

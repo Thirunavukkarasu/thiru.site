@@ -2,6 +2,7 @@ import Link from "next/link";
 import { compareDesc } from "date-fns";
 import { formatDate } from "@/lib/date";
 import { getBlogPosts } from "../db/blog";
+import ViewCounter from "../view-counter";
 
 export const metadata = {
   title: "Blog",
@@ -25,9 +26,9 @@ async function BlogPost({ post }: any) {
         {post.date && (
           <>
             <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
-            {/* <ViewCounter slug={post.slug} /> */}
           </>
         )}
+        <ViewCounter slug={post.slug} />
         <Link
           href={`blog/${post.slug}`}
           className="absolute inset-0"

@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { unstable_noStore as noStore } from "next/cache";
+import Link from "next/link";
+import Image from "next/image";
+import { kv } from "@vercel/kv";
+
 import { getBlogPosts } from "@/app/db/blog";
 import { CustomMDX } from "@/components/mdx";
-import Link from "next/link";
 import { ArrowIcon } from "@/components/icons";
-import Image from "next/image";
+import ViewCounter from "@/app/view-counter";
 
 export async function generateMetadata({
   params,
@@ -82,12 +85,15 @@ function formatDate(date: string) {
   }
 }
 
-export default function Blog({ params }: any) {
+export default async function Blog({ params }: any) {
   let post = getBlogPosts().find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
   }
+
+  //Note: Using Vercel KV Increment view counter slug value by One
+  await kv.incr(post.slug);
 
   return (
     <section>
@@ -116,15 +122,14 @@ export default function Blog({ params }: any) {
       <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
         {post.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
+      <div className="flex space-x-4 items-center mt-2 mb-8 text-sm max-w-[650px]">
         <Suspense fallback={<p className="h-5" />}>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
             {formatDate(post.metadata.publishedAt)}
           </p>
         </Suspense>
-        {/* <Suspense fallback={<p className="h-5" />}>
-          <Views slug={post.slug} />
-        </Suspense> */}
+
+        <ViewCounter slug={post.slug} />
       </div>
       {post.metadata.image && (
         <Image
