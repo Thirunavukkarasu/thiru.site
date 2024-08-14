@@ -23,9 +23,11 @@ async function BlogPost({ post }: any) {
         )}
       </div>
       <div>
-        {post.date && (
+        {post.metadata.publishedAt && (
           <>
-            <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
+            <p className="text-sm text-gray-500">
+              {formatDate(post.metadata.publishedAt)}
+            </p>
           </>
         )}
         <ViewCounter slug={post.slug} />
