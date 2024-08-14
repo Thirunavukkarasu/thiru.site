@@ -14,7 +14,7 @@ async function BlogPost({ post }: any) {
       className="group relative flex flex-row justify-between space-y-2 border-gray-200 py-2"
     >
       <div>
-        <h2 className="text-base font-bold text-gray-700 underline">
+        <h2 className="text-base font-bold text-gray-700">
           {post.metadata.title}
         </h2>
         {post.metadata.summary && (

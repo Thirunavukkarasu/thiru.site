@@ -31,13 +31,13 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export default function SideProjects() {
   return (
     <section className="">
-      <h1 className="text-lg font-semibold text-gray-700">Projects</h1>
-      <p className="text-base text-gray-600">
+      <h1 className="text-lg font-semibold text-gray-700">Side Projects</h1>
+      {/* <p className="text-base text-gray-600">
         Creations between playtime with my small one.
-      </p>
+      </p> */}
       <div className="mt-5">
         <div className="grid gap-4">
           {projects.map((project) => (
@@ -46,14 +46,14 @@ export default function Projects() {
               className="group relative flex flex-row items-center justify-between space-y-2"
             >
               <div>
-                <h2 className="text-base font-extrabold text-gray-700 underline">
+                <h2 className="text-base font-extrabold text-gray-700">
                   {project.title}
                 </h2>
-                {project.description && (
+                {/* {project.description && (
                   <p className="max-w-3xl text-gray-500">
                     {project.description}
                   </p>
-                )}
+                )} */}
               </div>
 
               {/* {project.date && (

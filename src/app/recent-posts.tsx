@@ -14,9 +14,9 @@ export default function RecentPosts() {
   return (
     <section className="">
       <h1 className="text-lg font-semibold text-gray-700">Recent Posts</h1>
-      <p className="text-base text-gray-600">
+      {/* <p className="text-base text-gray-600">
         A collection of thoughts, ideas, and projects.
-      </p>
+      </p> */}
       <div className="mt-5">
         {recentPosts?.length ? (
           <div className="grid gap-4">
@@ -26,7 +26,7 @@ export default function RecentPosts() {
                 className="group relative flex flex-row justify-between space-y-2 border-gray-200 py-2"
               >
                 <div>
-                  <h2 className="text-base font-bold text-gray-700 underline">
+                  <h2 className="text-base font-bold text-gray-700">
                     {post.metadata.title}
                   </h2>
                   {post.metadata.summary && (

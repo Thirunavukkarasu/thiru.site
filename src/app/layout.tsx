@@ -40,15 +40,28 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       className={cn(
-        "text-black bg-white dark:text-white dark:bg-[#111010]",
+        "h-full antialiased light",
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-6 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-4 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
+      <body className="antialiased flex h-full bg-zinc-50 dark:bg-black">
+        <main className="flex w-full">
+          {/* Use a fixed container to create a backdrop */}
+          <div className="fixed inset-0 flex justify-center sm:px-8">
+            <div className="flex w-full max-w-7xl lg:px-8">
+              <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
+            </div>
+          </div>
+          {/* Use a relative container to center the content */}
+          <div className="relative flex w-full flex-col">
+            <div className="mx-auto w-full max-w-7xl lg:px-8">
+              <div className="mx-auto max-w-2xl lg:max-w-5xl">
+                <Navbar />
+                {children}
+              </div>
+            </div>
+          </div>
         </main>
       </body>
     </html>

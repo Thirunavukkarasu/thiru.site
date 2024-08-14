@@ -28,7 +28,15 @@ const data = [
 export default function page() {
   return (
     <>
-      <h1 className="text-3xl">my work</h1>
+      <header className="max-w-2xl">
+        <h1 className="text-xl font-bold tracking-tight text-zinc-800 sm:text-xl dark:text-zinc-100">
+          My Experiences
+        </h1>
+        <p className="text-base text-zinc-600 dark:text-zinc-400">
+          A list of experiences that I have had in the past
+        </p>
+      </header>
+      <hr className="my-4" />
       {data.map((item, index) => (
         <Fragment key={index}>
           <div className="mb-4 border-0 shadow-none m-0">

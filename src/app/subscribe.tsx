@@ -6,9 +6,9 @@ export default function Subscribe() {
   }
 
   return (
-    <section className="my-10 space-y-6 rounded-lg bg-gray-700 px-8 py-5 text-white">
+    <section className="my-10 space-y-6 rounded-lg p-5 border">
       <div className="mb-6">
-        <h2 className="text-2xl font-bold leading-relaxed tracking-wide text-orange-600">
+        <h2 className="text-2xl font-bold leading-relaxed tracking-wide text-zinc-600">
           Subscribe to my newsletter
         </h2>
         <p className="text-base tracking-wider">
@@ -30,12 +30,12 @@ export default function Subscribe() {
           type="email"
           name="email"
           id="bd-email"
-          className="w-96 rounded-lg bg-orange-200 px-5 py-3"
+          className="w-96 rounded-lg border px-5 py-3"
         />
         <input
           type="submit"
           value="Subscribe Now"
-          className=" ml-5 cursor-pointer rounded-lg bg-orange-800 px-5 py-3 tracking-wider"
+          className="ml-5 cursor-pointer bg-zinc-900 text-white rounded-lg px-5 py-3 tracking-wider"
         />
       </form>
       <p>10 Subscribers - No Spam</p>
