@@ -98,7 +98,12 @@ html {
 }
 
 .prose a {
-  @apply transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply transition-all underline-offset-2 decoration-[0.1em];
+  text-decoration-color: rgb(163 163 163);
+}
+
+.dark .prose a {
+  text-decoration-color: rgb(82 82 82);
 }
 
 .prose .anchor:after {
