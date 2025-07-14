@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 ::selection {
   background-color: #47a3f3;
@@ -107,8 +105,12 @@ html {
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
+  color: rgb(212 212 212);
   content: "#";
+}
+
+.dark .prose .anchor:after {
+  color: rgb(64 64 64);
 }
 
 .prose *:hover > .anchor {
@@ -116,7 +118,14 @@ html {
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900;
+  @apply rounded-lg overflow-x-auto;
+  background-color: rgb(250 250 250);
+  border: 1px solid rgb(229 229 229);
+}
+
+.dark .prose pre {
+  background-color: rgb(23 23 23);
+  border: 1px solid rgb(23 23 23);
 }
 
 .prose code {
