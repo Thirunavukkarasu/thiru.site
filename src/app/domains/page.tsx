@@ -50,15 +50,31 @@ export const metadata: Metadata = {
 export default function Domains() {
   return (
     <div className="prose prose-neutral dark:prose-invert">
-      <h1>Domains I've Worked In</h1>
-
-      <p>
-        Over my 13+ years in software engineering, I've built and scaled systems
-        across multiple business domains. Each domain has taught me unique
-        lessons about business logic, user needs, and technical architecture.
-        All systems are deployed on AWS Cloud using ECS Docker deployment with
-        GitHub Actions for CI/CD automation.
-      </p>
+      <div className="my-8 p-4 bg-black text-green-400 font-mono text-sm border border-gray-600 rounded">
+        <div className="mb-2">
+          <span className="text-yellow-400">$</span> whoami
+        </div>
+        <div className="mb-2 text-green-300">🚀 fullstack developer</div>
+        <div className="mb-2">
+          <span className="text-yellow-400">$</span> cat /systems/status
+        </div>
+        <div className="mb-2 text-green-300">
+          SYSTEMS THAT DON'T BREAK WHEN YOU NEED THEM MOST 💪
+        </div>
+        <div className="mb-2">
+          <span className="text-yellow-400">$</span> cat /philosophy/engineering
+        </div>
+        <div className="mb-2 text-green-300">
+          "Over engineering is easy, under engineering is easy, engineering is
+          hard" 💡
+        </div>
+        <div className="mb-2">
+          <span className="text-yellow-400">$</span> ls /tech-stack/
+        </div>
+        <div className="text-green-300">
+          MERN PERN Java-Spring AWS Docker GitHub
+        </div>
+      </div>
 
       <div className="grid gap-6 mt-8">
         <section>
