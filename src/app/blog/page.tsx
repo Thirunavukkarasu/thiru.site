@@ -138,6 +138,27 @@ export default async function BlogPage() {
           </Link>
         </p>
       </div>
+
+      <h2>🔬 Lab</h2>
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Experimental features, side projects, and creative experiments. A
+        playground for trying new ideas.
+      </p>
+
+      <ul className="simple-list">
+        <li>
+          <a href="/experiments/books">📚 Reading Journey</a>
+          <span className="text-muted-foreground ml-2">
+            Track reading goals and progress
+          </span>
+        </li>
+        <li>
+          <a href="/experiments">🎨 More Experiments</a>
+          <span className="text-muted-foreground ml-2">
+            View all experimental features
+          </span>
+        </li>
+      </ul>
     </div>
   );
 }
