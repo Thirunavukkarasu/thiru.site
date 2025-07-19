@@ -1,0 +1,186 @@
+/* Custom Code Highlighting Styles */
+.code-block-wrapper pre {
+  background: #1e1e1e !important;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0;
+  overflow-x: auto;
+  border: 1px solid #333;
+}
+
+.code-block-wrapper pre code {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0;
+  font-family: "Fira Code", "Monaco", "Consolas", "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Fallback for any pre elements with language classes */
+pre[class*="language-"] {
+  background: #1e1e1e !important;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border: 1px solid #333;
+}
+
+pre[class*="language-"] code {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0;
+  font-family: "Fira Code", "Monaco", "Consolas", "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Language-specific styling */
+.language-bash {
+  color: #e6e6e6;
+}
+
+.language-javascript {
+  color: #e6e6e6;
+}
+
+.language-json {
+  color: #e6e6e6;
+}
+
+.language-dockerfile {
+  color: #e6e6e6;
+}
+
+.language-css {
+  color: #e6e6e6;
+}
+
+.language-html {
+  color: #e6e6e6;
+}
+
+.language-typescript {
+  color: #e6e6e6;
+}
+
+.language-jsx {
+  color: #e6e6e6;
+}
+
+.language-tsx {
+  color: #e6e6e6;
+}
+
+/* Prism.js token colors */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a737d;
+}
+
+.token.punctuation {
+  color: #e6e6e6;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #79b8ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #85e89d;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #f97583;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #f97583;
+}
+
+.token.function,
+.token.class-name {
+  color: #b392f0;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ffab70;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* Copy button styling */
+.code-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2d2d2d;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #333;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.75rem;
+  color: #e6e6e6;
+}
+
+.code-block-content {
+  border-radius: 0 0 8px 8px;
+}
+
+.copy-button {
+  background: #404040;
+  border: 1px solid #555;
+  color: #e6e6e6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-button:hover {
+  background: #505050;
+  border-color: #666;
+}
+
+.copy-button:active {
+  background: #303030;
+}

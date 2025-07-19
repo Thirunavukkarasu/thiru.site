@@ -1,8 +1,19 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { highlight } from "sugar-high";
+import Prism from "prismjs";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-json";
+import "prismjs/components/prism-css";
+import "prismjs/components/prism-markup";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-jsx";
+import "prismjs/components/prism-tsx";
+import "prismjs/themes/prism-tomorrow.css";
 
 function Table({ data }: any) {
   let headers = data.headers.map((header: any, index: any) => (
@@ -50,9 +61,9 @@ function RoundedImage(props: any) {
 
 function Callout(props: any) {
   return (
-    <div className="px-4 py-3 border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm flex items-center text-neutral-900 dark:text-neutral-100 mb-8">
-      <div className="flex items-center w-4 mr-4">{props.emoji}</div>
-      <div className="w-full callout">{props.children}</div>
+    <div className="px-4 py-3 border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 rounded-r-lg p-4 text-sm flex items-start text-neutral-900 dark:text-neutral-100 mb-8">
+      <div className="flex items-center w-6 mr-3 text-lg">{props.emoji}</div>
+      <div className="w-full callout leading-relaxed">{props.children}</div>
     </div>
   );
 }
@@ -111,9 +122,52 @@ function ConsCard({ title, cons }: any) {
   );
 }
 
-function Code({ children, ...props }: any) {
-  let codeHTML = highlight(children);
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
+function Code({ children, className, ...props }: any) {
+  const language = className ? className.replace("language-", "") : "text";
+  const [copied, setCopied] = React.useState(false);
+
+  React.useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+
+  // Handle Dockerfile syntax (it uses bash highlighting)
+  const prismLanguage = language === "dockerfile" ? "bash" : language;
+
+  const highlightedCode = Prism.highlight(
+    children,
+    Prism.languages[prismLanguage] || Prism.languages.text,
+    prismLanguage
+  );
+
+  const copyToClipboard = async () => {
+    await navigator.clipboard.writeText(children);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="code-block-wrapper">
+      <div className="code-block-header">
+        <span className="language-label">{language}</span>
+        <button
+          className="copy-button"
+          onClick={copyToClipboard}
+          title="Copy code"
+        >
+          {copied ? "Copied!" : "Copy"}
+        </button>
+      </div>
+      <div className="code-block-content">
+        <pre className={`language-${language}`}>
+          <code
+            className={`language-${language}`}
+            dangerouslySetInnerHTML={{ __html: highlightedCode }}
+            {...props}
+          />
+        </pre>
+      </div>
+    </div>
+  );
 }
 
 function slugify(str: any) {

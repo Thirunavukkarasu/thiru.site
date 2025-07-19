@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import SocialLinks from "./social-links";
 
 export const metadata: Metadata = {
   title: "Thirunavukkarasu Muthusamy - Engineering Director & Architect",
@@ -108,6 +109,7 @@ export default function Home() {
           className="rounded-full mx-auto"
           priority
         />
+        <SocialLinks />
       </div>
 
       <p>

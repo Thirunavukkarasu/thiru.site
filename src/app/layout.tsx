@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import { EnhancedAnalytics } from "@/components/analytics";
 import { cn } from "@/lib/utils";
 import "./globals.css";
+import "./code-highlight.css";
 
 export const metadata: Metadata = {
   manifest: "/manifest.json",
