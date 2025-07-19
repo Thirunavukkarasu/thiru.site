@@ -56,15 +56,17 @@ export default function Domains() {
         Over my 13+ years in software engineering, I've built and scaled systems
         across multiple business domains. Each domain has taught me unique
         lessons about business logic, user needs, and technical architecture.
+        All systems are deployed on AWS Cloud using ECS Docker deployment with
+        GitHub Actions for CI/CD automation.
       </p>
 
       <div className="grid gap-6 mt-8">
-        <section className="border-l-4 border-blue-500 pl-6">
+        <section>
           <h2>🏦 Loan Management Systems (LMS)</h2>
           <p>
             Built comprehensive loan management systems handling the entire
             lifecycle from application to collection with automated underwriting
-            and risk assessment.
+            and risk assessment. Built with MERN stack and Java & Spring.
           </p>
           <div className="mt-4">
             <Link href="/domains/lms" className="text-blue-600 hover:underline">
@@ -73,12 +75,12 @@ export default function Domains() {
           </div>
         </section>
 
-        <section className="border-l-4 border-green-500 pl-6">
+        <section>
           <h2>📦 Order Management Systems (OMS)</h2>
           <p>
             Designed end-to-end order management systems for multi-channel
             processing, inventory management, and fulfillment across e-commerce
-            and B2B channels.
+            and B2B channels. Built with MERN stack and Java & Spring.
           </p>
           <div className="mt-4">
             <Link href="/domains/oms" className="text-blue-600 hover:underline">
@@ -87,12 +89,12 @@ export default function Domains() {
           </div>
         </section>
 
-        <section className="border-l-4 border-orange-500 pl-6">
+        <section>
           <h2>🏭 Warehouse Management Systems (WMS)</h2>
           <p>
             Built warehouse systems optimizing storage, picking, and shipping
             operations with mobile-first design and IoT integration for maximum
-            efficiency.
+            efficiency. Built with PERN stack.
           </p>
           <div className="mt-4">
             <Link href="/domains/wms" className="text-blue-600 hover:underline">
@@ -101,12 +103,12 @@ export default function Domains() {
           </div>
         </section>
 
-        <section className="border-l-4 border-purple-500 pl-6">
+        <section>
           <h2>📈 Sales OS & Marketing OS</h2>
           <p>
             Developed marketing and sales operating systems for customer
             acquisition, lead management, and revenue operations with AI-powered
-            insights.
+            insights. Built with MERN stack and Java & Spring.
           </p>
           <div className="mt-4">
             <Link href="/domains/sos" className="text-blue-600 hover:underline">
@@ -115,11 +117,12 @@ export default function Domains() {
           </div>
         </section>
 
-        <section className="border-l-4 border-red-500 pl-6">
+        <section>
           <h2>💰 Finance Management Systems (FMS)</h2>
           <p>
             Built financial systems handling accounting, budgeting, and
             reporting with compliance, security, and multi-currency support.
+            Built with PERN stack.
           </p>
           <div className="mt-4">
             <Link href="/domains/fms" className="text-blue-600 hover:underline">
@@ -128,12 +131,12 @@ export default function Domains() {
           </div>
         </section>
 
-        <section className="border-l-4 border-teal-500 pl-6">
-          <h2>📊 Data Engineering & Headless BI</h2>
+        <section>
+          <h2>📊 Data Engineering & Headless BI (Mantys)</h2>
           <p>
             Scaled data pipelines and built headless BI infrastructure using
             modern data stack (Fivetran, DBT, DLThub, Cube.dev) for real-time
-            analytics.
+            analytics. Built with PERN stack.
           </p>
           <div className="mt-4">
             <Link
@@ -144,12 +147,6 @@ export default function Domains() {
             </Link>
           </div>
         </section>
-      </div>
-
-      <div className="mt-8">
-        <Link href="/" className="text-blue-600 hover:underline">
-          ← Back to home
-        </Link>
       </div>
     </div>
   );

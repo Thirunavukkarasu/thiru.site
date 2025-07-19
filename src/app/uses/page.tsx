@@ -16,7 +16,7 @@ export default function Uses() {
             </h2>
             <ul className="space-y-1">
               {items.map(({ name, description, link }) => (
-                <li key={name} className="pl-1">
+                <li key={name}>
                   <h3 className="text-xs font-medium">
                     <a
                       href={link}

@@ -144,265 +144,160 @@ export default function Home() {
 
       <h2>Things I believe</h2>
 
-      <h3>🚀 shipping fast beats the best strategy</h3>
+      <h4>⚙️ developer experience drives user experience</h4>
       <ul>
         <li>
-          <strong>Speed is a superpower</strong> - Move quickly and iterate
-          based on real feedback.
+          developer experience is vital for building shipping fast engineering
+          teams
         </li>
         <li>
-          <strong>Create a bias toward shipping</strong> - Get things out there
-          and iterate based on real feedback.
+          outdated technology stack is harmful for engineering teams to ship
+          fast
         </li>
         <li>
-          <strong>Small teams ship faster</strong> - Complexity grows
-          exponentially with team size.{" "}
+          without fixing developer experience, fixing anything else doesn't
+          matter
+        </li>
+        <li>great developer experience enables great user experience</li>
+      </ul>
+
+      <h4>🚀 shipping fast beats the best strategy</h4>
+      <ul>
+        <li>
+          speed is a <em>superpower</em>
+        </li>
+        <li>create a bias toward shipping</li>
+        <li>
+          {" "}
           <a
             href="https://www.amazon.com/Team-Topologies-Organizing-Business-Technology/dp/1942788819"
             target="_blank"
             rel="noopener"
           >
-            Team topologies
-          </a>
+            small teams
+          </a>{" "}
+          ship faster
         </li>
         <li>
-          <strong>Landings &gt; launches</strong> - Product adoption matters
-          more than shipping code.
+          landings &gt; launches (i.e. product adoption &gt; shipping code)
         </li>
-        <li>
-          <strong>
-            Listen, build, ship, tell the customer, then repeat forever
-          </strong>{" "}
-          - The continuous feedback loop.
-        </li>
+        <li>listen, build, ship, tell the customer, then repeat forever</li>
       </ul>
 
-      <h3>⚡ quality over scale</h3>
+      <h4>⚡ quality over scale</h4>
       <ul>
+        <li>building amazing products for fewer users is just as valuable</li>
+        <li>user impact drives technical decisions</li>
         <li>
-          <strong>
-            Building amazing products for fewer users is just as valuable
-          </strong>{" "}
-          - Impact isn't measured by user count alone.
-        </li>
-        <li>
-          <strong>User impact drives technical decisions</strong> - Technology
-          should serve users, not the other way around.
-        </li>
-        <li>
-          <strong>Technical debt is a business decision</strong> - Sometimes
-          shipping fast is more valuable than perfect code.{" "}
+          technical debt is a{" "}
           <a
             href="https://martinfowler.com/articles/is-quality-worth-cost.html"
             target="_blank"
             rel="noopener"
           >
-            Is quality worth the cost?
+            business decision
           </a>
         </li>
-        <li>
-          <strong>Technical excellence enables business success</strong> - Solid
-          architecture and clean code are investments that pay dividends.
-        </li>
+        <li>technical excellence enables business success</li>
       </ul>
 
-      <h3>🎯 simplicity beats complexity</h3>
+      <h4>🎯 simplicity beats complexity</h4>
       <ul>
+        <li>don't complicate architecture just to learn new tech</li>
+        <li>microservices aren't always the answer</li>
         <li>
-          <strong>Don't complicate architecture just to learn new tech</strong>{" "}
-          - Start simple, add complexity when you have real problems.{" "}
-          <a
-            href="https://www.youtube.com/watch?v=rI8tNMsozo0"
-            target="_blank"
-            rel="noopener"
-          >
-            Simple made easy
-          </a>
-        </li>
-        <li>
-          <strong>Microservices aren't always the answer</strong> - Start with a
-          monolith, split when you have real problems.{" "}
-          <a
-            href="https://martinfowler.com/articles/microservices.html"
-            target="_blank"
-            rel="noopener"
-          >
-            Microservices guide
-          </a>
-        </li>
-        <li>
-          <strong>Monorepos solve real problems for lean teams</strong> - Shared
-          tooling, consistent standards, easier refactoring.{" "}
+          monorepos solve real problems for{" "}
           <a
             href="https://nx.dev/concepts/more-concepts/why-monorepos"
             target="_blank"
             rel="noopener"
           >
-            Why monorepos
+            lean teams
           </a>
         </li>
-        <li>
-          <strong>Premature optimization is still evil</strong> - Build for
-          today's needs, not tomorrow's assumptions.
-        </li>
-        <li>
-          <strong>Don't busy yourself with being busy</strong> - More
-          repositories doesn't mean better engineering.
-        </li>
+        <li>premature optimization is evil</li>
+        <li>don't busy yourself with being busy</li>
       </ul>
 
-      <h3>👥 great teams build great products</h3>
+      <h4>👥 great teams build great products</h4>
       <ul>
         <li>
-          <strong>
-            The quality of your team directly impacts the quality of your output
-          </strong>{" "}
-          - Invest in people, not just technology.
+          the quality of your team directly impacts the quality of your output
         </li>
+        <li>leadership is about enabling others</li>
         <li>
-          <strong>Leadership is about enabling others</strong> - The best
-          leaders create environments where their teams can thrive.
-        </li>
-        <li>
-          <strong>Diversity in teams leads to better solutions</strong> -
-          Different perspectives create more robust and innovative outcomes.{" "}
+          diversity creates{" "}
           <a
             href="https://www.mckinsey.com/featured-insights/diversity-and-inclusion/diversity-wins-how-inclusion-matters"
             target="_blank"
             rel="noopener"
           >
-            Diversity wins
+            better solutions
           </a>
         </li>
+        <li>mentorship creates lasting impact</li>
         <li>
-          <strong>Mentorship creates lasting impact</strong> - Investing in
-          others' growth creates a stronger engineering community.
-        </li>
-        <li>
-          <strong>Code reviews are about learning, not gatekeeping</strong> -
-          Use them to share knowledge and improve together.{" "}
+          code reviews are about{" "}
           <a
             href="https://google.github.io/eng-practices/review/"
             target="_blank"
             rel="noopener"
           >
-            Google's code review guide
+            learning
           </a>
+          , not gatekeeping
         </li>
       </ul>
 
-      <h3>💬 communication is the job</h3>
+      <h4>💬 communication is the job</h4>
       <ul>
         <li>
-          <strong>
-            Clear communication bridges the gap between technical and business
-            needs
-          </strong>{" "}
-          - It's as important as coding.
+          clear communication bridges the gap between technical and business
+          needs
         </li>
         <li>
-          <strong>Clear writing is clear thinking</strong> - If you can't
-          explain it simply, you don't understand it well enough.{" "}
+          clear writing is{" "}
           <a
             href="https://www.paulgraham.com/writing44.html"
             target="_blank"
             rel="noopener"
           >
-            Writing and speaking
+            clear thinking
           </a>
         </li>
-        <li>
-          <strong>Leaders step up to provide clarity when absent</strong> - Take
-          ownership of communication gaps.
-        </li>
-        <li>
-          <strong>
-            Be the person taking notes, even if it's just for yourself
-          </strong>{" "}
-          - Documentation creates clarity.
-        </li>
+        <li>leaders step up to provide clarity when absent</li>
+        <li>documentation creates clarity</li>
       </ul>
 
-      <h3>📚 continuous learning is non-negotiable</h3>
+      <h4>📚 continuous learning is non-negotiable</h4>
       <ul>
+        <li>technology evolves rapidly, and staying current is essential</li>
+        <li>education is the best form of developer marketing</li>
         <li>
-          <strong>
-            Technology evolves rapidly, and staying current is essential
-          </strong>{" "}
-          - Never stop learning.
-        </li>
-        <li>
-          <strong>Education is the best form of developer marketing</strong> -
-          Share knowledge, build trust.
-        </li>
-        <li>
-          <strong>Be ruthlessly truth-seeking</strong> - Have strong opinions,
-          loosely held.{" "}
+          be{" "}
           <a
             href="https://medium.com/@ameet/strong-opinions-weakly-held-a-framework-for-thinking-6530d417e364"
             target="_blank"
             rel="noopener"
           >
-            Strong opinions, weakly held
+            ruthlessly truth-seeking
           </a>
         </li>
       </ul>
 
-      <h3>⚙️ developer experience drives user experience</h3>
+      <h4>📝 documentation is code</h4>
       <ul>
+        <li>if it's not documented, it doesn't exist</li>
         <li>
-          <strong>
-            Developer experience is vital for building shipping fast engineering
-            teams
-          </strong>{" "}
-          - Without fixing developer experience, you can never fix user
-          experience.
-        </li>
-        <li>
-          <strong>
-            Outdated technology stack is harmful for engineering teams to ship
-            fast
-          </strong>{" "}
-          - Modern tools enable speed and productivity.
-        </li>
-        <li>
-          <strong>
-            Without fixing developer experience, fixing anything else doesn't
-            matter
-          </strong>{" "}
-          - DX is the foundation that enables everything else.
-        </li>
-        <li>
-          <strong>
-            Great developer experience enables great user experience
-          </strong>{" "}
-          - Happy developers build better products.
-        </li>
-      </ul>
-
-      <h3>📝 documentation is code</h3>
-      <ul>
-        <li>
-          <strong>If it's not documented, it doesn't exist</strong> -
-          Documentation is as important as the code itself.{" "}
-          <a
-            href="https://www.divio.com/blog/documentation/"
-            target="_blank"
-            rel="noopener"
-          >
-            Documentation system
-          </a>
-        </li>
-        <li>
-          <strong>Testing is about confidence, not coverage</strong> - Focus on
-          testing the right things, not hitting numbers.{" "}
+          testing is about{" "}
           <a
             href="https://kentcdodds.com/blog/testing-implementation-details"
             target="_blank"
             rel="noopener"
           >
-            Testing implementation details
+            confidence
           </a>
+          , not coverage
         </li>
       </ul>
 
