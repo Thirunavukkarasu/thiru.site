@@ -1,0 +1,156 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Business Domains - Enterprise Systems & Architecture",
+  description:
+    "Explore the business domains I've worked in over 13+ years: Loan Management Systems (LMS), Order Management Systems (OMS), Warehouse Management Systems (WMS), Sales OS & Marketing OS, Finance Management Systems (FMS), and Data Engineering & Headless BI.",
+  keywords: [
+    "Loan Management Systems",
+    "LMS",
+    "Order Management Systems",
+    "OMS",
+    "Warehouse Management Systems",
+    "WMS",
+    "Sales OS",
+    "Marketing OS",
+    "Finance Management Systems",
+    "FMS",
+    "Data Engineering",
+    "Headless BI",
+    "Enterprise Systems",
+    "Business Architecture",
+    "System Design",
+    "Multi-domain Experience",
+    "B2B Systems",
+    "E-commerce Systems",
+    "Financial Systems",
+    "Data Pipelines",
+  ],
+  openGraph: {
+    title: "Business Domains - Enterprise Systems & Architecture",
+    description:
+      "Explore the business domains I've worked in over 13+ years: Loan Management Systems, Order Management Systems, Warehouse Management Systems, Sales OS & Marketing OS, Finance Management Systems, and Data Engineering & Headless BI.",
+    url: "https://thiru.site/domains",
+    siteName: "Thirunavukkarasu Muthusamy",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Business Domains - Enterprise Systems & Architecture",
+    description:
+      "Explore the business domains I've worked in over 13+ years: Loan Management Systems, Order Management Systems, Warehouse Management Systems, Sales OS & Marketing OS, Finance Management Systems, and Data Engineering & Headless BI.",
+  },
+  alternates: {
+    canonical: "https://thiru.site/domains",
+  },
+};
+
+export default function Domains() {
+  return (
+    <div className="prose prose-neutral dark:prose-invert">
+      <h1>Domains I've Worked In</h1>
+
+      <p>
+        Over my 13+ years in software engineering, I've built and scaled systems
+        across multiple business domains. Each domain has taught me unique
+        lessons about business logic, user needs, and technical architecture.
+      </p>
+
+      <div className="grid gap-6 mt-8">
+        <section className="border-l-4 border-blue-500 pl-6">
+          <h2>🏦 Loan Management Systems (LMS)</h2>
+          <p>
+            Built comprehensive loan management systems handling the entire
+            lifecycle from application to collection with automated underwriting
+            and risk assessment.
+          </p>
+          <div className="mt-4">
+            <Link href="/domains/lms" className="text-blue-600 hover:underline">
+              Learn more →
+            </Link>
+          </div>
+        </section>
+
+        <section className="border-l-4 border-green-500 pl-6">
+          <h2>📦 Order Management Systems (OMS)</h2>
+          <p>
+            Designed end-to-end order management systems for multi-channel
+            processing, inventory management, and fulfillment across e-commerce
+            and B2B channels.
+          </p>
+          <div className="mt-4">
+            <Link href="/domains/oms" className="text-blue-600 hover:underline">
+              Learn more →
+            </Link>
+          </div>
+        </section>
+
+        <section className="border-l-4 border-orange-500 pl-6">
+          <h2>🏭 Warehouse Management Systems (WMS)</h2>
+          <p>
+            Built warehouse systems optimizing storage, picking, and shipping
+            operations with mobile-first design and IoT integration for maximum
+            efficiency.
+          </p>
+          <div className="mt-4">
+            <Link href="/domains/wms" className="text-blue-600 hover:underline">
+              Learn more →
+            </Link>
+          </div>
+        </section>
+
+        <section className="border-l-4 border-purple-500 pl-6">
+          <h2>📈 Sales OS & Marketing OS</h2>
+          <p>
+            Developed marketing and sales operating systems for customer
+            acquisition, lead management, and revenue operations with AI-powered
+            insights.
+          </p>
+          <div className="mt-4">
+            <Link href="/domains/sos" className="text-blue-600 hover:underline">
+              Learn more →
+            </Link>
+          </div>
+        </section>
+
+        <section className="border-l-4 border-red-500 pl-6">
+          <h2>💰 Finance Management Systems (FMS)</h2>
+          <p>
+            Built financial systems handling accounting, budgeting, and
+            reporting with compliance, security, and multi-currency support.
+          </p>
+          <div className="mt-4">
+            <Link href="/domains/fms" className="text-blue-600 hover:underline">
+              Learn more →
+            </Link>
+          </div>
+        </section>
+
+        <section className="border-l-4 border-teal-500 pl-6">
+          <h2>📊 Data Engineering & Headless BI</h2>
+          <p>
+            Scaled data pipelines and built headless BI infrastructure using
+            modern data stack (Fivetran, DBT, DLThub, Cube.dev) for real-time
+            analytics.
+          </p>
+          <div className="mt-4">
+            <Link
+              href="/domains/data-engineering"
+              className="text-blue-600 hover:underline"
+            >
+              Learn more →
+            </Link>
+          </div>
+        </section>
+      </div>
+
+      <div className="mt-8">
+        <Link href="/" className="text-blue-600 hover:underline">
+          ← Back to home
+        </Link>
+      </div>
+    </div>
+  );
+}

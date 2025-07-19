@@ -1,0 +1,109 @@
+# Cursor Rules for thiru.site
+
+## Design Principles
+
+### 1. Minimal Design
+- Prefer simple, clean layouts over complex visual elements
+- Avoid excessive spacing and visual clutter
+- Focus on content readability and accessibility
+
+### 2. Content-First Approach
+- Prioritize content over decorative elements
+- Use the `prose` class for all content pages
+- Ensure content is easily scannable and readable
+
+### 3. No Redundant Navigation
+- Don't include page headings (h1) when navbar already provides navigation context
+- The navbar should be the primary navigation indicator
+- Avoid duplicate navigation information
+
+### 4. Consistent Styling
+- Use the `prose` class for all content pages
+- Use `simple-list` class for clean list presentations
+- Maintain consistent typography and spacing across pages
+
+### 5. Compact Layouts
+- Prefer compact, efficient layouts over spacious designs
+- Use minimal spacing between elements
+- Avoid unnecessary visual separation
+
+## Development Guidelines
+
+### 6. No Content Duplication
+- Avoid duplicate content across pages
+- Merge similar pages when appropriate (e.g., About + Experience)
+- Keep content focused and purposeful
+
+### 7. Simple Component Structure
+- Prefer simple HTML structure over complex layouts
+- Use semantic HTML elements appropriately
+- Avoid unnecessary wrapper divs and containers
+
+### 8. Performance Considerations
+- Remove unused components and complexity
+- Prefer simple CSS over complex animations
+- Optimize for fast loading and rendering
+
+### 9. Mobile-First Design
+- Ensure all layouts work well on mobile devices
+- Use responsive design principles
+- Test layouts on different screen sizes
+
+### 10. Accessibility
+- Use proper alt text for images
+- Ensure proper heading hierarchy
+- Maintain good color contrast
+- Use semantic HTML elements
+
+## Code Style
+
+### 11. React/Next.js Best Practices
+- Use Client Components only when necessary (for interactivity)
+- Prefer Server Components for static content
+- Use proper TypeScript types
+- Follow Next.js 13+ App Router conventions
+
+### 12. CSS Guidelines
+- Use Tailwind CSS utility classes
+- Prefer simple CSS over complex custom styles
+- Use CSS custom properties for theming
+- Maintain consistent spacing and sizing
+
+### 13. File Organization
+- Keep components simple and focused
+- Use descriptive file and component names
+- Organize code logically and consistently
+
+## Content Guidelines
+
+### 14. Writing Style
+- Keep content concise and focused
+- Use clear, professional language
+- Avoid unnecessary jargon
+- Write for the target audience
+
+### 15. Information Architecture
+- Organize content logically
+- Use clear navigation structure
+- Ensure content is easy to find and access
+- Maintain consistent content patterns
+
+## Quality Assurance
+
+### 16. Testing
+- Ensure all links work correctly
+- Test responsive design on multiple devices
+- Verify accessibility compliance
+- Check for broken images or resources
+
+### 17. Performance
+- Optimize images and assets
+- Minimize bundle size
+- Use efficient loading strategies
+- Monitor Core Web Vitals
+
+### 18. Maintenance
+- Keep dependencies updated
+- Remove unused code and files
+- Document important decisions
+- Maintain clean git history 
